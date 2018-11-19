@@ -1,4 +1,4 @@
-# The JavaScript Tutorial
+# Tutorial JavaScript
 
 Acest repository găzduiește conținutul articolului Modern JavaScript Tutorial, publicat la [https://javascript.info](https://javascript.info).
 
