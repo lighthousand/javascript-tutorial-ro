@@ -21,7 +21,7 @@ Dacă dorești să traduci in limba ta, te rog clonează repository-ul, schimbă
 Poți edita textul în orice editor (cu stil de sintaxă markdown). Server-ul folosit pentru a rula tutorialul, local, și modul de utilizare se află la : <https://github.com/iliakan/javascript-tutorial-server>.  
 
 
-## Structura
+## Structură
 
 Fiecare capitol, articol sau task își are folder-ul propriu.
 
