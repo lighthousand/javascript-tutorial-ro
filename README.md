@@ -1,37 +1,36 @@
 # The JavaScript Tutorial
 
-This repository hosts the content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+Acest repository găzduiește conținutul articolului Modern JavaScript Tutorial, publicat la [https://javascript.info](https://javascript.info).
 
-## Translations
+## Traduceri
 
-(In alphabetical order):
+(În ordine alfabetică):
 
-| Language | Github | Translation leads | Translated (%) | Published |
+| Limbă | Github | Îndrumător traduceri | Tradus (%) | Publicat |
 |----------|--------|-------------------|-----------------|-----------|
-| Chinese | https://github.com/xitu/javascript-tutorial-zh | @leviding | ![](http://translate-hook.javascript.info/stats/zh.svg?1) | - |
-| Japanese | https://github.com/KenjiI/javascript-tutorial-ja | @KenjiI | ![](http://translate-hook.javascript.info/stats/ja.svg?1) | - |
-| Russian | https://github.com/iliakan/javascript-tutorial-ru | @iliakan | * | https://learn.javascript.ru |
-| Turkish | https://github.com/sahinyanlik/javascript-tutorial-tr | @sahinyanlik | ![](http://translate-hook.javascript.info/stats/tr.svg?1) | - |
+| Chineză | https://github.com/xitu/javascript-tutorial-zh | @leviding | ![](http://translate-hook.javascript.info/stats/zh.svg?1) | - |
+| Japoneză | https://github.com/KenjiI/javascript-tutorial-ja | @KenjiI | ![](http://translate-hook.javascript.info/stats/ja.svg?1) | - |
+| Rusă | https://github.com/iliakan/javascript-tutorial-ru | @iliakan | * | https://learn.javascript.ru |
+| Turcă | https://github.com/sahinyanlik/javascript-tutorial-tr | @sahinyanlik | ![](http://translate-hook.javascript.info/stats/tr.svg?1) | - |
 
 
-`*` – the previous version is published in Russian, need to backport/translate the new one from English.
+`*` – versiunea precedentă este publicată in rusă, este necesară portarea/traducerea celei noi, din engleză.
 
-If you'd like to translate it into your language, please clone the repository, change its name to `javascript-tutorial-...` (by the language) and [create an issue](https://github.com/iliakan/javascript-tutoria-en/issues/new) for me to add you to the list.
+Dacă dorești să traduci in limba ta, te rog clonează repository-ul, schimbă-i numele in `javascript-tutorial-...` (după limbă) și [creează un issue](https://github.com/iliakan/javascript-tutoria-en/issues/new) pentru a-mi permite să te adaug la listă.
 
-You can edit the text in any editor (markdown-like syntax). The server to run the tutorial locally and see how it looks is at <https://github.com/iliakan/javascript-tutorial-server>.  
+Poți edita textul în orice editor (cu stil de sintaxă markdown). Server-ul folosit pentru a rula tutorialul, local, și modul de utilizare se află la : <https://github.com/iliakan/javascript-tutorial-server>.  
 
 
+## Structura
 
-## Structure
+Fiecare capitol, articol sau task își are folder-ul propriu.
 
-Every chapter, article or a task has its folder.
+Folder-ul este denumit astfel `N-url`, under `N` este un număr pentru scopuri de sortare și `url` este partea URL-ului cu titlul materialului.
 
-The folder is named like `N-url`, where `N` is a number for the sorting purposes and `url` is the URL part with title of the material.
+Tipul materialului este dat de fișierul din interiorul folder-ului:
 
-The type of the material is defined by the file inside the folder:
+  - `index.md` înseamnă capitol
+  - `article.md` înseamnă articol
+  - `task.md` înseamnă task (de asemenea soluția trebuie dată în fișierul `solution.md`)
 
-  - `index.md` stands for a chapter
-  - `article.md` stands for an article
-  - `task.md` stands for a task (solution must be provided in `solution.md` file aswell)
-
-Each of these files starts from the `# Main header`.
+Fiecare dintre aceste fișiere începe din `# Main header`.
