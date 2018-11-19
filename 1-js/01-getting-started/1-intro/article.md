@@ -1,15 +1,16 @@
-# An Introduction to JavaScript
+# Introducere în JavaScript
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Să vedem ce e atât de special la JavaScript, ce putem realiza cu el și ce alte tehnologii se înțeleg bine cu acesta.
 
-## What is JavaScript?
+## Ce este JavaScript?
 
-*JavaScript* was initially created to *"make web pages alive"*.
+*JavaScript* a fost creat inițial pentru *"make web pages alive"*.
 
-The programs in this language are called *scripts*. They can be written right in the HTML and executed automatically as the page loads.
+În acest limbaj programele sunt numite *scripts*(script-uri). Acestea pot fi scrise direct în HTML și executate în mod automat pe măsură ce pagina se încarcă.
 
-Scripts are provided and executed as a plain text. They don't need a special preparation or a compilation to run.
+Script-urile sunt furnizate și executate ca și text simplu. Ele nu au nevoie de pregătire specială sau de compilație pentru a rula.
 
+În ceea ce privește acest
 In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
 ```smart header="Why <u>Java</u>Script?"
