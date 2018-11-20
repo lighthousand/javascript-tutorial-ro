@@ -70,52 +70,52 @@ Exemplele acestor restricții sunt:
 	Există mijloace prin care se poate interacționa cu camera/microfonul sau alte dispozitive, dar ele necesită permisiunea explicită a utilizatorului. Așadar o pagină pe care este activat JavaScript-ul nu ar putea activa o cameră web în mod viclean, și privească împrejurimile și să trimită informații către [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
 - În general, diferite tab-uri/ferestre nu știu unele despre celelalte. Câteodată aceste știu, de exemplu când o fereastră folosește JavaScript pentru a deschide cealaltă fereastră. Dar chiar și în acest caz, JavaScript nu poate accesa cealaltă fereastră dacă ambele ferestre vin de pe site-uri diferite (de la un domeniu, protocol sau port diferit).
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must contain a special JavaScript code that handles data exchange.
+	Acest lucru se numește "Same Origin Policy"(politica aceeași origine). Pentru a lucra în jurul acesteia, *ambele pagini* trebuie să conțină un cod special JavaScript care să administreze schimbul de date.
 
-    The limitation is again for user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's safety limitations.
+	Limitarea este din nou pentru siguranța utilizatorului. O pagină de la `http://anysite.com` pe care un utilizator a deschis-o nu trebuie să poată accesa alt tab al browser-ului cu URL-ul `http://gmail.com` și să fure informații de acolo.
+- JavaScript poate cu ușurință să comunice pe net către server, de unde a venit pagina curentă. Dar abilitatea sa de a primi date de la alte site-uri/domenii este infirmată. Deși posibil, acesta necesită acord explicit(expirmat prin headere HTTP) din partea serverului de la distanță. Din nou, acestea sunt limitări de securitate.
 
 ![](limitations.png)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow installing plugin/extensions which may get extended permissions.
+Astfel de limite nu există dacă JavaScript este folosit în afara browser-ului, de exemplu pe un server. Browserele moderne permit de asemenea instalarea plugin-urilor/extensiilor cărora li se pot extinde permisiunile.
 
-## What makes JavaScript unique?
+## Ce face JavaScript unic?
 
-There are at least *three* great things about JavaScript:
+Sunt cel puțin *trei* lucruri imporante în legătură cu JavaScript:
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Supported by all major browsers and enabled by default.
++ Integrare completă cu HTML/CSS.
++ Lucruri simple sunt făcute simplu.
++ Este suportat de către toate browserele majore și este activat în mod implicit.
 ```
 
-Combined, these three things exist only in JavaScript and no other browser technology.
+Combinate, aceste trei lucruri există doar în JavaScript și în nicio altă tehnologie browser.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool to create browser interfaces.
+Asta e ceea ce face JavaScript unic. De aceea este cea mai răspândită unealtă pentru crearea de interfețe pentru browser.
 
-While planning to learn a new technology, it's beneficial to check its perspectives. So let's move on to the modern trends that include new languages and browser abilities.
+Pe parcursul planificării învățării unei noi tehnologii este benefic să verifici perspectivele acesteia. Așa că să trecem la trendurile moderne care includ noi limbaje și abilități ale browser-ului.
 
 
-## Languages "over" JavaScript
+## Limbaje "pe" JavaScript
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+Sintaxa JavaScript-ului nu se potrivește cerințelor fiecăruia. Persoane diferite vor diferite feature-uri.
 
-That's to be expected, because projects and requirements are different for everyone.
+Acest lucru este de așteptat, pentru că proiectele și cerințele sunt diferite pentru fiecare.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+Așa că recent a apărut o pletoră de noi limbaje noi, care sunt *transpilate*(convertite) în JavaScript, înainte ca ele să ruleze în browser.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+Uneltele moderne fac transpilarea foarte rapidă și transparentă, permițând defapt dezvoltatorilor să codeze în alt limbaj și să auto convertească codul în cod "sub capotă".
 
-Examples of such languages:
+Exemple de astfel de limbaje:
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript, it introduces shorter syntax, allowing to write more precise and clear code. Usually Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing", to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps). It was initially offered by Google as a replacement for JavaScript, but as of now, browsers require it to be transpiled to JavaScript just like the ones above.
+- [CoffeeScript](http://coffeescript.org/) este un "zahăr sintactic" pentru JavaScript, el introduce sintaxă mai scurtă, permițând scrierea de cod mai clar și mai precis. De obicei este îndrăgit de către dezvoltatorii Ruby.
+- [TypeScript](http://www.typescriptlang.org/) este concentrat pe adăugarea de "tipizare strictă de date", pentru a simplifica dezvoltarea și suportul sistemelor complexe. Este dezvoltat de Microsoft.
+- [Dart](https://www.dartlang.org/) este un limbaj standalone care are propriul său motor care rulează în medii non-browser(precum aplicațiile mobile). A fost oferit inițial de către Google ca și un înlocuitor pentru JavaScript, dar de acum browserele necesită ca acesta să fie transpilat în JavaScript la fel ca cele de mai sus.
 
-There are more. Of course, even if we use one of those languages, we should also know JavaScript, to really understand what we're doing.
+Există mai multe. Desigur, chiar dacă folosim unul dintre aceste limbaje, ar trebui de asemenea să știm JavaScript, pentru a înțelege cu adevărat ce facem.
 
-## Summary
+## Rezumat
 
-- JavaScript was initially created as a browser-only language, but now it is used in many other environments as well.
-- At this moment, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- JavaScript a fost creat inițial ca limbaj doar pentru browser(browser-only), dar acum este de asemenea folosit în multe alte medii.
+- La momentul actual, JavaScript deține o poziție unică ca cel mai răspândit și adoptat limbaj browser cu integrare completă cu HTML/CSS.
+- Există multe limbaje care sunt "transpilate" în JavaScript și furnizează anumite caracteristici. Este recomandat să arunci o privire peste ele, cel puțin din mare, după ce stăpânești JavaScript.
