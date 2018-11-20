@@ -10,8 +10,7 @@ Să vedem ce e atât de special la JavaScript, ce putem realiza cu el și ce alt
 
 Script-urile sunt furnizate și executate ca și text simplu. Ele nu au nevoie de pregătire specială sau de compilație pentru a rula.
 
-În ceea ce privește acest
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+În ceea ce privește acest aspect, JavaScript este foarte diferit de un alt limbaj cu nume asemănător [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
 ```smart header="Why <u>Java</u>Script?"
 When JavaScript was created, it initially had another name: "LiveScript". But Java language was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
