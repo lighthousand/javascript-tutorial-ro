@@ -57,9 +57,9 @@ De exemplu, JavaScript din browser este capabil să:
 - Preia și să seteze cookie-uri, pună întrebări vizitatorului, arate mesaje.
 - Să-și amintească date pe partea de client("local storage").
 
-## Ce nu poate in-browser JavaScript să facă?
+## Ce nu poate JavaScript-ul din browser să facă?
 
-Abilitățile JavaScript-ului în browser sunt limitate pentru siguranța utilizatorului. Scopul este acela de a preveni o pagină web malițioasă să acceseze informații private sau să corupă datele utilizatorului.
+Abilitățile JavaScript-ului din browser sunt limitate pentru siguranța utilizatorului. Scopul este acela de a preveni o pagină web malițioasă să acceseze informații private sau să corupă datele utilizatorului.
 
 Exemplele acestor restricții sunt:
 
@@ -67,13 +67,13 @@ Exemplele acestor restricții sunt:
 
 	Browserele moderne îi permit să lucreze cu fișiere, dar accesul este limitat și furnizat doar dacă utilizatorul realizează anumite acțiuni, cum ar fi "scăparea" unui fișier într-o fereastră de browser sau selectarea lui printr-un tag `<input>`.
 
-	Există mijloace prin care se poate interacționa cu camera/microfonul sau alte dispozitive, dar ele necesită permisiunea explicită a utilizatorului. Așadar o pagină pe care este activat JavaScript-ul nu ar putea activa o cameră web în mod viclean, și privească împrejurimile și să trimită informații către [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- În general, diferite tab-uri/ferestre nu știu unele despre celelalte. Câteodată aceste știu, de exemplu când o fereastră folosește JavaScript pentru a deschide cealaltă fereastră. Dar chiar și în acest caz, JavaScript nu poate accesa cealaltă fereastră dacă ambele ferestre vin de pe site-uri diferite (de la un domeniu, protocol sau port diferit).
+	Există mijloace prin care se poate interacționa cu camera/microfonul sau alte dispozitive, dar ele necesită permisiunea explicită a utilizatorului. Așadar o pagină pe care este activat JavaScript-ul nu ar putea activa o cameră web în mod viclean, și să privească împrejurimile și să trimită informații către [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+- În general, diferite tab-uri/ferestre nu știu nimic unele despre celelalte. Câteodată acestea știu, de exemplu când o fereastră folosește JavaScript pentru a deschide cealaltă fereastră. Dar chiar și în acest caz, JavaScript nu poate accesa cealaltă fereastră dacă ambele ferestre vin de pe site-uri diferite (de la un domeniu, protocol sau port diferit).
 
-	Acest lucru se numește "Same Origin Policy"(politica aceeași origine). Pentru a lucra în jurul acesteia, *ambele pagini* trebuie să conțină un cod special JavaScript care să administreze schimbul de date.
+	Acest lucru se numește "Same Origin Policy"(politica aceleiași origini). Pentru a lucra în jurul acesteia, *ambele pagini* trebuie să conțină un cod special JavaScript care să administreze schimbul de date.
 
 	Limitarea este din nou pentru siguranța utilizatorului. O pagină de la `http://anysite.com` pe care un utilizator a deschis-o nu trebuie să poată accesa alt tab al browser-ului cu URL-ul `http://gmail.com` și să fure informații de acolo.
-- JavaScript poate cu ușurință să comunice pe net către server, de unde a venit pagina curentă. Dar abilitatea sa de a primi date de la alte site-uri/domenii este infirmată. Deși posibil, acesta necesită acord explicit(expirmat prin headere HTTP) din partea serverului de la distanță. Din nou, acestea sunt limitări de securitate.
+- JavaScript poate cu ușurință să comunice pe net către server, de unde a venit pagina curentă. Dar abilitatea sa de a primi date de la alte site-uri/domenii este infirmată. Deși posibil, acesta necesită acord explicit(exprimat prin headere HTTP) din partea serverului de la distanță. Din nou, acestea sunt limitări de securitate.
 
 ![](limitations.png)
 
@@ -85,7 +85,7 @@ Sunt cel puțin *trei* lucruri imporante în legătură cu JavaScript:
 
 ```compare
 + Integrare completă cu HTML/CSS.
-+ Lucruri simple sunt făcute simplu.
++ Lucrurile simple sunt făcute simplu.
 + Este suportat de către toate browserele majore și este activat în mod implicit.
 ```
 
@@ -102,9 +102,9 @@ Sintaxa JavaScript-ului nu se potrivește cerințelor fiecăruia. Persoane difer
 
 Acest lucru este de așteptat, pentru că proiectele și cerințele sunt diferite pentru fiecare.
 
-Așa că recent a apărut o pletoră de noi limbaje noi, care sunt *transpilate*(convertite) în JavaScript, înainte ca ele să ruleze în browser.
+Așa că recent a apărut o pletoră de limbaje noi, care sunt *transpilate*(convertite) în JavaScript, înainte ca ele să ruleze în browser.
 
-Uneltele moderne fac transpilarea foarte rapidă și transparentă, permițând defapt dezvoltatorilor să codeze în alt limbaj și să auto convertească codul în cod "sub capotă".
+Uneltele moderne fac transpilarea foarte rapidă și transparentă, permițând defapt dezvoltatorilor să codeze în alt limbaj și să auto convertească codul în cod "sub capotă"(under the hood).
 
 Exemple de astfel de limbaje:
 
@@ -118,4 +118,4 @@ Există mai multe. Desigur, chiar dacă folosim unul dintre aceste limbaje, ar t
 
 - JavaScript a fost creat inițial ca limbaj doar pentru browser(browser-only), dar acum este de asemenea folosit în multe alte medii.
 - La momentul actual, JavaScript deține o poziție unică ca cel mai răspândit și adoptat limbaj browser cu integrare completă cu HTML/CSS.
-- Există multe limbaje care sunt "transpilate" în JavaScript și furnizează anumite caracteristici. Este recomandat să arunci o privire peste ele, cel puțin din mare, după ce stăpânești JavaScript.
+- Există multe limbaje care sunt "transpilate" în JavaScript și furnizează anumite caracteristici. Este recomandat să arunci o privire peste ele, în linii mari, după ce stăpânești JavaScript.
