@@ -1,26 +1,26 @@
-# Introducere în JavaScript
+# O introducere în JavaScript
 
 Să vedem ce e atât de special la JavaScript, ce putem realiza cu el și ce alte tehnologii se înțeleg bine cu acesta.
 
 ## Ce este JavaScript?
 
-*JavaScript* a fost creat inițial pentru *"make web pages alive"*.
+*JavaScript* a fost creat inițial pentru *"a da viață paginilor"*.
 
-În acest limbaj programele sunt numite *scripts*(script-uri). Acestea pot fi scrise direct în HTML și executate în mod automat pe măsură ce pagina se încarcă.
+În acest limbaj programele sunt numite *script-uri*(scripts). Acestea pot fi scrise direct în HTML și executate în mod automat pe măsură ce pagina se încarcă.
 
-Script-urile sunt furnizate și executate ca și text simplu. Ele nu au nevoie de pregătire specială sau de compilație pentru a rula.
+Script-urile sunt furnizate și executate ca și text simplu. Ele nu au nevoie de pregătire specială sau de compilare pentru a rula.
 
-În ceea ce privește acest aspect, JavaScript este foarte diferit de un alt limbaj cu nume asemănător [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+În ceea ce privește acest aspect, JavaScript este foarte diferit față de un alt limbaj cu nume asemănător, [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
 
 ```smart header="Why <u>Java</u>Script?"
-Când JavaScript a fost creat, inițial avea un alt nume: "LiveScript". Dar la acel moment limbajul Java era foarte popular, așa că a fost decis că poziționarea unui nou limbaj ca și "frate mai mic" al lui Java, va ajuta.
+Când JavaScript a fost creat, inițial avea un alt nume: "LiveScript". Dar la acel moment limbajul Java era foarte popular, așa s-a decis că poziționarea unui nou limbaj ca și "frate mai mic" al lui Java, va ajuta.
 
 Dar cum acesta a evoluat, JavaScript a devenit un limbaj complet independent, cu propriile specificații, numite [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), iar acum nu mai are nici o legătură cu Java.
 ```
 
-În prezent, JavaScript nu doar că poate executa în browser, dar de asemenea poate executa pe server, sau chiar pe orice dispozitiv care are un program special numit [ the JavaScript engine(motorul JavaScript)](https://en.wikipedia.org/wiki/JavaScript_engine).
+În prezent, JavaScript nu doar că poate executa în browser, dar de asemenea poate executa pe server, sau chiar pe orice dispozitiv care are un program special numit [ motorul JavaScript(the JavaScript engine)](https://en.wikipedia.org/wiki/JavaScript_engine).
 
-Browser-ul are un motor încorporat, uneori denumit "JavaScript virtual machine"(mașină virtuală JavaScript).
+Browser-ul are un motor încorporat, uneori denumit "mașină virtuală JavaScript"(JavaScript virtual machine).
 
 Diferite motoare au diferite "nume de cod", spre exemplu:
 
@@ -28,32 +28,32 @@ Diferite motoare au diferite "nume de cod", spre exemplu:
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- în Firefox.
 - ...Mai există și alte nume de cod precum "Trident" și "Chakra" pentru diferite versiuni de IE, "ChakraCore" pentru Microsoft Edge, "Nitro" și "SquirrelFish" pentru Safari, etc.
 
-Termenii de mai sus e bine să fie memorați, pentru că ei sunt folosiți în articole ale dezvoltatorilor, pe internet. De exemplu, dacă "o caracteristică X este suportată de către V8", atunci probabil că merge și în Chrome și în Opera.
+Termenii de mai sus sunt bine de știut, pentru că ei sunt folosiți în articole ale dezvoltatorilor, pe internet. De exemplu dacă "o caracteristică X este suportată de către V8", atunci probabil că merge și în Chrome și în Opera.
 
 ```smart header="How do engines work?"
 
 Motoarele sunt complicate. Dar fundamentele sunt ușoare.
 
-1. Motorul (încorporat dacă este un browser) citește("parsează") script-ul.
+1. Motorul (încorporat, dacă este un browser) citește("parsează") script-ul.
 2. Apoi convertește("compilează") script-ul în limbajul mașină.
 3. Apoi codul mașină rulează, destul de repede.
 
 Motorul aplică optimizări la fiecare stadiu al procesului. Ba chiar observă script-ul compilat cum rulează, analizează datele care trec prin el și aplică optimizări asupra codului mașină, bazate pe informațiile strânse. La sfârșit script-urile sunt chiar rapide.
 ```
 
-## Ce poate in-browser JavaScript să facă?
+## Ce poate JavaScript-ul din browser să facă?
 
 JavaScript-ul modern este un limbaj de programare "sigur". Nu furnizează acces low-level la memorie sau la CPU, pentru că inițial a fost creat pentru browsere, care nu necesitau acest lucru.
 
-Capacitățile depind mult de mediul care rulează JavaScript. De exemplu, [Node.JS](https://wikipedia.org/wiki/Node.js) suportă funcții care permit JavaScript-ului să citească/scrie fișiere arbitrare, să realizeze request-uri de rețea, etc.
+Capabilitățile depind mult de mediul în se care rulează JavaScript. De exemplu, [Node.JS](https://wikipedia.org/wiki/Node.js) suportă funcții care permit JavaScript-ului să citească/scrie fișiere arbitrare, să realizeze request-uri de rețea, etc.
 
-In-browser Javascript poate face orice în legătură cu manipularea paginii web, interacțiunea cu utilizatorului, și cu serverul web.
+Javascript-ul din browser poate face orice în legătură cu manipularea paginii web, interacțiunea cu utilizatorul, și cu serverul web.
 
-De exemplu, in-browser JavaScript este capabil să: 
+De exemplu, JavaScript din browser este capabil să: 
 
 - Adauge HTML nou în pagină, schimbe  conținutul existent, modifice stiluri.
 - Reacționeze la acțiunile utilizatorului, execute la click de mouse, mișcări ale cursorului, sau apăsări de taste.
-- Trimită request-uri prin rețea către servere remote(la distanță), descarce și încarce fișiere (așa-numitele tehnologii [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming) și [COMET](https://en.wikipedia.org/wiki/Comet_(programming)).
+- Trimită request-uri prin rețea către servere remote(la distanță), descarce și încarce fișiere (așa-numitele tehnologii [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) și [COMET](https://en.wikipedia.org/wiki/Comet_(programming)).
 - Preia și să seteze cookie-uri, pună întrebări vizitatorului, arate mesaje.
 - Să-și amintească date pe partea de client("local storage").
 
