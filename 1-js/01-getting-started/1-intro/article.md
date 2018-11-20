@@ -53,7 +53,7 @@ De exemplu, JavaScript din browser este capabil să:
 
 - Adauge HTML nou în pagină, schimbe  conținutul existent, modifice stiluri.
 - Reacționeze la acțiunile utilizatorului, execute la click de mouse, mișcări ale cursorului, sau apăsări de taste.
-- Trimită request-uri prin rețea către servere remote(la distanță), descarce și încarce fișiere (așa-numitele tehnologii [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) și [COMET](https://en.wikipedia.org/wiki/Comet_(programming)).
+- Trimită request-uri prin rețea către servere remote(la distanță), descarce și încarce fișiere (așa-numitele tehnologii [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) și [COMET](https://en.wikipedia.org/wiki/Comet_(programming))).
 - Preia și să seteze cookie-uri, pună întrebări vizitatorului, arate mesaje.
 - Să-și amintească date pe partea de client("local storage").
 
