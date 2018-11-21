@@ -1,16 +1,16 @@
-# The modern mode, "use strict"
+# Modul modern, "use strict"
 
-For a long time JavaScript was evolving without compatibility issues. New features were added to the language, but the old functionality did not change.
+Pentru o lungă perioadă de timp JavaScript evolua fără probleme de compatibilitate. Noi feature-uri erau adăugate limbajului, dar funcționalitatea veche nu s-a schimbat.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript creators got stuck in the language forever.
+Acest lucru a avut beneficiul de a nu strica cod deja existent. Însă dezavantajul era că orice greșeală sau o decizie imperfectă făcută de către creatorii JavaScript ar fi rămas blocată în limbaj pentru totdeauna.
 
-It had been so until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most modifications are off by default. One needs to enable them explicitly with a special directive `"use strict"`.
+Așa s-a întâmplat până în 2009 când a apărut ECMAScript 5 (ES5). Acesta a adăugat noi trăsături limbajului și a modificat unele deja existente. Pentru a păstra vechiul cod care mergea, majoritatea modificărilor sunt oprite implicit. Ele trebuie activate explicit cu o directivă specială `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located on the top of the script, then the whole script works the "modern" way.
+Directiva arată ca un string: `"use strict"` sau `'use strict'`. Când este localizat sus, la începutul script-ului, atunci tot scriptul funcționează în maniera "modernă",
 
-For example
+De exemplu
 
 ```js
 "use strict";
@@ -19,15 +19,14 @@ For example
 ...
 ```
 
-We will learn functions (a way to group commands) soon.
+Vom învăța funcții (o modalitate de a grupa comenzi) în curând.
 
-Looking ahead let's just note that `"use strict"` can be put at the start of a function (most kinds of functions) instead of the whole script. Then strict mode is enabled in that function only. But usually people use it for the whole script.
-
+Privind înainte să observăm doar că `"use strict"` poate fi pus la începutul unei funcții (majoritatea tipurilor de funcții) în loc de începutul script-ului. Atunci modul strict este activat doar în acea funcție. Dar de obicei oamenii îl folosesc pentru întregul script.
 
 ````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is on the top of the script, otherwise the strict mode may not be enabled.
+Te rog, asigură-te că `"use strict"` se află la începutul script-ului, altfel modul strict s-ar putea să nu fie activat.
 
-There is no strict mode here:
+Aici nu e niciun mod strict:
 
 ```js no-strict
 alert("some code");
@@ -38,24 +37,24 @@ alert("some code");
 // strict mode is not activated
 ```
 
-Only comments may appear above `"use strict"`.
+Doar comentariile pot apărea deasupra lui `"use strict"`.
 ````
 
 ```warn header="There's no way to cancel `use strict`"
-There is no directive `"no use strict"` or alike, that would return the old behavior.
+Nu există nicio directivă `"no use strict"` sau ceva asemănător, care ar returna un comportament vechi.
 
-Once we enter the strict mode, there's no return.
+Odată ce intrăm în modul strict nu mai există cale de întoarcere.
 ```
 
-## Always "use strict"
+## Întotdeauna folosește "use strict"
 
-The differences of `"use strict"` versus the "default" mode are still to be covered.
+Diferența dintre `"use strict"` și modul "default" urmează a fi acoperite.
 
-In the next chapters, as we learn language features, we'll make notes about the differences of the strict and default mode. Luckily, there are not so many. And they actually make our life better.
+În următoarele capitole, pe măsură ce învățăm caracteristicile limbajului, vom nota diferențele dintre modul strict și modul default. Din fericire nu sunt prea multe. Și defapt ele ne fac viața mai ușoară.
 
-At this point in time it's enough to know about it in general:
+La acest moment în timp este suficient să știi despre el (limbaj) în general:
 
-1. The `"use strict"` directive switches the engine to the "modern" mode, changing the behavior of some built-in features. We'll see the details as we study.
-2. The strict mode is enabled by `"use strict"` at the top. Also there are several language features like "classes" and "modules" that enable strict mode automatically.
-3. The strict mode is supported by all modern browsers.
-4. It's always recommended to start scripts with `"use strict"`. All examples in this tutorial assume so, unless (very rarely) specified otherwise.
+1. Directiva `"use strict"` comută motorul în modul modern, schimbând comportamentul unor caracteristici built-in. Vom vedea detaliile pe măsură ce învățăm.
+2. Modul strict este activat de către `"use strict"` la începutul scriptului. De asemenea există câteva caracteristice de limbaj precum "clasele" (classes) și "module" (modules) ce activează modul strict în mod automat.
+3. Modul strict este suportat de către toate browserele moderne.
+4. Este întotdeauna recomandat să începi scripturile cu `"use strict"`. Toate exemplele din acest tutorial presupun acest lucru, dacă nu este specificat (foarte rar) altfel.
