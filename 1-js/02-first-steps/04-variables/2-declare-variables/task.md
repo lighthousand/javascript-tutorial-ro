@@ -1,8 +1,8 @@
-importance: 3
+importanță: 3
 
 ---
 
-# Giving the right name
+# Setarea unui nume potrivit
 
-1. Create the variable with the name of our planet. How would you name such a variable?
-2. Create the variable to store the name of the current visitor. How would you name that variable?
+1. Creează variabila cu numele planetei noastre. Cum ai denumi tu o astfel de variabilă?
+2. Creează variabila pentru a stoca numele vizitatorului curent. Cum ai denumi acea variabilă?

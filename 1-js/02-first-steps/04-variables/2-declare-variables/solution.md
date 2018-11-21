@@ -1,21 +1,21 @@
-First, the variable for the name of our planet.
+În primul rând, variabile pentru numele planetei noastre.
 
-That's simple:
+Asta este simplu:
 
 ```js
 let ourPlanetName = "Earth";
 ```
 
-Note, we could use a shorter name `planet`, but it might be not obvious what planet it refers to. It's nice to be more verbose. At least until the variable isNotTooLong.
+Ține minte, am putea folosi un nume mai scurt `planet`, dar e posibil să nu fie evident la ce planetă se referă. E bine să fii mai puțin concis. Cel puțin până când variabila nuEPreaLungă.
 
-Second, the name of the current visitor:
+În al doilea rând, numele vizitatorului curent:
 
 ```js
 let currentUserName = "John";
 ```
 
-Again, we could shorten that to `userName` if we know for sure that the user is current.
+Din nou, am putea scurta în `userName` dacă știm cu siguranță că utilizatorul este curent.
 
-Modern editors and autocomplete make long variable names easy to write. Don't save on them. A name with 3 words in it is fine.
+Editoarele moderne și autocompletatoarele fac ca numele lungi de variabile să fie ușor de scris. Nu te baza pe ele. Un nume din 3 cuvinte este în regulă.
 
-And if your editor does not have proper autocompletion, get [a new one](/code-editors).
+Și dacă editorul tău nu are autocompletare potrivită, ia [unul nou](/code-editors).

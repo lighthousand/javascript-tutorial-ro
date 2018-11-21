@@ -1,24 +1,24 @@
-# Variables
+# Variabile
 
-Most of the time, a JavaScript application needs to work with information. Here are 2 examples:
-1. An online-shop -- the information might include goods being sold and a shopping cart. 
-2. A chat application -- the information might include users, messages, and much more.
+În majoritatea timpului, o aplicație JavaScript trebuie să lucreze cu informații. Iată aici 2 exemple:
+1. Un magazin online -- informațiile ar putea include produse ce sunt de vânzare și un coș de cumpărături.
+2. O aplicație chat -- informațiile ar putea include utilizatori, mesaje și mult mai multe.
 
-Variables are used to store this information.
+Variabilele sunt folosite pentru a stoca informații.
 
-## A variable
+## O variabilă
 
-A [variable](https://en.wikipedia.org/wiki/Variable_(computer_science)) is a "named storage" for data. We can use variables to store goodies, visitors and other data.
+O [variabilă](https://en.wikipedia.org/wiki/Variable_(computer_science)) este un "depozit cu nume" pentru date. Putem folosi variabile pentru a stoca bunuri, vizitatori și alte date.
 
-To create a variable in JavaScript, we need to use the `let` keyword.
+Pentru a creea o variabilă în JavaScript trebuie să folosim cuvântul cheie `let`.
 
-The statement below creates (in other words: *declares* or *defines*) a variable with the name "message":
+Afirmația de mai jos creează (cu alte cuvinte: *declară* sau *definește*) o variabilă cu numele "message":
 
 ```js
 let message;
 ```
 
-Now we can put some data into it by using the assignment operator `=`:
+Acum putem pune ceva date în ea folosind operatorul de asignare (atribuire) `=`:
 
 ```js
 let message;
@@ -27,8 +27,7 @@ let message;
 message = 'Hello'; // store the string
 */!*
 ```
-
-The string is now saved into the memory area associated with the variable. We can access it using the variable name:
+String-ul este acum salvat în zona de memorie asociată cu variabila. O putem accesa folosind numele variabilei:
 
 ```js run
 let message;

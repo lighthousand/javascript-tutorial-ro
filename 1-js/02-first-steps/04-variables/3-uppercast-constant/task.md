@@ -1,10 +1,10 @@
-importance: 4
+importanță: 4
 
 ---
 
-# Uppercase const?
+# Constantă uppercase?
 
-Examine the following code:
+Examinează următorul cod:
 
 ```js
 const birthday = '18.04.1982';
@@ -12,9 +12,9 @@ const birthday = '18.04.1982';
 const age = someCode(birthday);
 ```
 
-Here we have a constant `birthday` date and the `age` is calculated from `birthday` with the help of some code (it is not provided for shortness, and because details don't matter here).
+Aici avem o constantă `birthday` date și `age` care este calculată din `birthday` cu ajutorul a puțin cod (nu este dat pentru din cauza lungimii, și pentru că detaliile nu contează aici).
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+Ar fi potrivit să folosești upper case pentru `birthday`? Pentru `age`? Sau chiar pentru amândouă?
 
 ```js
 const BIRTHDAY = '18.04.1982'; // make uppercase?
