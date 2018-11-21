@@ -49,6 +49,7 @@ Atributul `type`: <code>&lt;script <u>type</u>=...&gt;</code>
   : Vechiul standard HTML4 necesita ca un script să aibă tip. De obicei acesta era `type="text/javascript"`. Nu mai este necesar. De asemenea, standardul modern a schimbat total înțelesul acestui atribut. Acum el poate fi folosit pentru module JavaScript. Dar acesta este un subiect avansat; vom vorbi despre module mai târziu, într-o altă parte a tutorialului.
 
 Atributul `language`: <code>&lt;script <u>language</u>=...&gt;</code>
+
   : Acest atribut era menit să afișeze limbajul script-ului. Acest atribut nu mai are sens, pentru JavaScript este limbajul implicit. Nu e necesar să-l folosim.
 
 Comentarii înainte și după script-uri.
