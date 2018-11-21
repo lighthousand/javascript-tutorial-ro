@@ -50,10 +50,10 @@ Atributul `type`: <code>&lt;script <u>type</u>=...&gt;</code>
 
 Atributul `language`: <code>&lt;script <u>language</u>=...&gt;</code>
 
-  : Acest atribut era menit să afișeze limbajul script-ului. Acest atribut nu mai are sens, pentru JavaScript este limbajul implicit. Nu e necesar să-l folosim.
+  : Acest atribut era menit să afișeze limbajul script-ului. El nu mai are sens, pentru că JavaScript este limbajul implicit. Nu e necesar să-l folosim.
 
 Comentarii înainte și după script-uri.
-: În cărțiile și ghidurile destul de antice, pot fi găsite comentarii înăuntr-ul `<script>`, astfel:
+: În cărțile și ghidurile destul de antice, pot fi găsite comentarii înăuntrul `<script>`, astfel:
 
     ```html no-beautify
     <script type="text/javascript"><!--
@@ -66,7 +66,7 @@ Comentarii înainte și după script-uri.
 
 ## Script-uri externe
 
-Dacă avem mult cod JavaScript, îl putem pune într-un fișier separat.
+Dacă avem mult cod JavaScript îl putem pune într-un fișier separat.
 
 Fișierul script este atașat HTML-ului cu atributul `src`:
 
@@ -74,7 +74,7 @@ Fișierul script este atașat HTML-ului cu atributul `src`:
 <script src="/path/to/script.js"></script>
 ```
 
-Aici `/path/to/script.js` este o cale absolută către fișierul cu script-ul(din site-ul rădăcină).
+Aici `/path/to/script.js` este o cale absolută către fișierul cu script-ul (din site-ul rădăcină).
 
 Este de asemenea posibil să furnizezi o cale relativă către pagina curentă. De exemplu, `src="script.js"` înseamnă un fișier `"script.js"` în folder-ul curent.
 
@@ -113,7 +113,7 @@ Asta nu va merge:
 </script>
 ```
 
-Trebuie să alegem: ori este un script extern `<script src="…">` ori unul obișnuit `<script>` cu cod.
+Trebuie să alegem: ori este un script extern `<script src="…">` ori unul obișnuit `<script>`, cu cod.
 
 Exemplul de mai sus poate fi rupt în două script-uri pentru a funcționa:
 
