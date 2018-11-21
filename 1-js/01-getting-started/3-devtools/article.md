@@ -1,58 +1,57 @@
-# Developer console
+# Consola dezvoltatorului
 
-Code is prone to errors. You are quite likely to make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Codul este înclinat erorilor. Este destul de probabil să comiți erori... Oh, stai, despre ce vorbesc? *Cu siguranță* vei avea erori, cel puțin dacă ești om și nu robot (https://en.wikipedia.org/wiki/Bender_(Futurama)).
 
-But in the browser, a user doesn't see the errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
+Dar în browser, un utilizator nu poate vedea erorile în mod implicit. Așa că, dacă ceva merge prost în script, nu vom putea vedea ce s-a stricat și nu vom putea repara.
 
-To see errors and get a lot of other useful information about scripts, "developer tools" have been embedded in browsers.
+Pentru a vedea erorile și a strânge alte informații folositoare despre script-uri, "unelte pentru dezvoltatori" (developer tools) au devenit încorporate în browsere.
 
-Most often developers lean towards Chrome or Firefox for development because those browsers have the best developer tools. Other browsers also provide developer tools, sometimes with special features, but are usually playing "catch-up" to Chrome or Firefox. So most people have a "favorite" browser and switch to others if a problem is browser-specific.
+Cel mai adesea dezvoltatorii sunt înclinați înspre Chrome sau Firefox pentru dezvoltare, deoarece aceste browsere au cele mai bune developer tools. Alte browsere oferă de asemenea developer tools, uneori cu trăsături speciale, dar de obicei încearcă să prindă din urmă pe cele din Chrome sau Firefox. Așa că majoritatea majoritatea oamenilor au un browser "favorit" și folosesc altul dacă apare o problemă specifică browser-ului.
 
-Developer tools are potent; there are many features. To start, we'll learn how to open them, look at errors and run JavaScript commands.
+Developer tools sunt puternice; există multe caracteristici. Pentru a începe, vom învăța cum să le deschidem, să ne uităm la erori și să rulăm comenzi JavaScript.
 
 ## Google Chrome
 
-Open the page [bug.html](bug.html).
+Deschide pagina [bug.html](bug.html).
 
-There's an error in the JavaScript code on it. It's hidden from a regular visitor's eyes, so let's open developer tools to see it.
+Există o eroare în aceasta. Este ascunsă de ochii unui vizitator obișnuit, așa că să deschidem developer tools pentru a o vedea.
 
-Press `key:F12` or, if you're on Mac, then `key:Cmd+Opt+J`.
+Apasă `tasta:F12` sau, daca ești pe un Mac, `tastele:Cmd+Opt+J`.
 
-The developer tools will open on the Console tab by default.
+Uneltele pentru dezvoltatori se vor deschide în Console (consolă) în mod implicit.
 
-It looks somewhat like this:
+Arată ceva în genul acesta:
 
 ![chrome](chrome.png)
 
-The exact look of developer tools depends on your version of Chrome. It changes from time to time but should be similar.
+Aspectul exact al uneltelor depinde de versiunea ta de Chrome. Se schimbă din timp în timă dar ar trebui să fie similar.
 
-- Here we can see the red-colored error message. In this case, the script contains an unknown "lalala" command.
-- On the right, there is a clickable link to the source `bug.html:12` with the line number where the error has occurred.
+- Aici putem vedea mesajul eroare de culoare roșie. În acest caz, script-ul conține o comandă străină,"lalala".
+- Pe dreapta, este un link clickable către sursa `bug.html:12` cu numărul liniei pe care a apărut eroarea.
 
-Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them (`key:Shift+Enter` to input multi-line commands).
+Sub mesajul de eroare, există un simbol albastru, `>`. Marchează o "linie de comandă" unde putem tasta comenzi JavaScript. Apasă `tasta:Enter` pentru a le rula (`tastele:Shift+Enter` pentru a insera comenzi multi-linie).
 
-Now we can see errors, and that's enough for a start. We'll be back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
+Acum putem vedea erori, iar asta e suficient pentru început. Vom reveni la uneltele pentru dezvoltatori mai târziu și vom acoperi debugging-ul mai în detaliu în capitolul <info:debugging-chrome>.
 
+## Firefox, Edge, și altele
 
-## Firefox, Edge, and others
+Majoritatea celorlalte browsere folosesc `tasta:F12` pentru a deschide uneltele pentru dezvoltatori.
 
-Most other browsers use `key:F12` to open developer tools.
-
-The look & feel of them is quite similar. Once you know how to use one of those tools (you can start with Chrome), you can easily switch to another.
+Aspectul și senzația lor este chiar similară. Odată ce știi cum să folosești una dintre aceste unelte (poți începe cu Chrome), vei putea să treci la altele cu ușurință.
 
 ## Safari
 
-Safari (Mac browser, not supported by Windows/Linux) is a little bit special here. We need to enable the "Develop menu" first.
+Safari (browser Mac, nu este suportat de Windows/Linux) este ceva mai special în acest caz. Trebuie să activăm "Meniul de dezvoltare" (Develop menu) mai întâi.
 
-Open Preferences and go to "Advanced" pane. There's a checkbox at the bottom:
+Deschide Preferințe (Preferences) și mergi la panoul "Avansat" (Advanced). La capăt exista un checkbox:
 
 ![safari](safari.png)
 
-Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu item named "Develop" has appeared. It has many commands and options.
+Acum `tasta:Cmd+Opt+C` poate comuta consola. De asemenea, observă că noul item de sus denumit "Develop" a apărut. Acesta conține multe comenzi și opțiuni.
 
-## Summary
+## Rezumat
 
-- Developer tools allow us to see errors, run commands, examine variables and much more.
-- They can be opened with `key:F12` for most browsers under Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
+- Uneltele pentru dezvoltatori ne permit să vedem erorile, să rulăm comenzi. să examinăm variabile și multe altele.
+- Ele pot fi deschise cu `tasta:F12` pentru majoritatea browserelor sub Windows. Chrome pentru Mac are `tastele:Cmd+Opt+J`, Safari: `tastele:Cmd+Opt+C` (trebuie să le activezi mai întâi).
 
-Now we have the environment ready. In the next section, we'll get down to JavaScript.
+Acum avem mediul pregătit. În următoarele secțiuni vom trece la JavaScript.
