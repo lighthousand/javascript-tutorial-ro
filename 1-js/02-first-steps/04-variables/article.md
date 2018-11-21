@@ -38,7 +38,7 @@ alert(message); // shows the variable content
 */!*
 ```
 
-To be concise we can merge the variable declaration and assignment into a single line:
+Pentru a fi preciși putem îmbina declarațiile și asignările variabilelor într-o singură linie:
 
 ```js run
 let message = 'Hello!'; // define the variable and assign the value
@@ -46,15 +46,15 @@ let message = 'Hello!'; // define the variable and assign the value
 alert(message); // Hello!
 ```
 
-We can also declare multiple variables in one line:
+Putem de asemenea declara variabile multiple pe o singură linie:
 
 ```js no-beautify
 let user = 'John', age = 25, message = 'Hello';
 ```
 
-That might seem shorter, but it's not recommended. For the sake of better readability, please use a single line per variable.
+Asta ar putea părea scurt, dar nu este neapărat recomandat. De dragul lizibilității mai mari, te rog folosește o singurp linie per variabilă.
 
-The multiline variant is a bit longer, but easier to read:
+Varianta multilinie este un pic mai lungă, dar mai ușor de citit:
 
 ```js
 let user = 'John';
@@ -62,14 +62,14 @@ let age = 25;
 let message = 'Hello';
 ```
 
-Some people also write many variables like that:
+Unele persoane de asemenea scriu multe dintre variabile în acest mod:
 ```js no-beautify
 let user = 'John',
   age = 25,
   message = 'Hello';
 ```
 
-...Or even in the "comma-first" style:
+...Sau chiar în stilul "comma-first" (virgula prima):
 
 ```js no-beautify
 let user = 'John'
@@ -77,32 +77,32 @@ let user = 'John'
   , message = 'Hello';
 ```
 
-Technically, all these variants do the same. So, it's a matter of personal taste and aesthetics.
+Din punct de vedere tehnic toate aceste variante fac același lucru. Așadar este o problemă de gust sau estetică.
 
 
 ````smart header="`var` instead of `let`"
-In older scripts you may also find another keyword: `var` instead of `let`:
+În script-uri mai vechi poți găsi un alt cuvânt cheie: `var` în loc de `let`:
 
 ```js
 *!*var*/!* message = 'Hello';
 ```
 
-The `var` keyword is *almost* the same as `let`. It also declares a variable, but in a slightly different, "old-school" fashion.
+Cuvântul cheie `var` este *aproape* la fel ca `let`. Declară de asemenea o variabilă, dar într-o manieră "old-school", puțin diferită.
 
-There are subtle differences between `let` and `var`, but they do not matter for us yet. We'll cover them in detail later, in the chapter <info:var>.
+Există diferențe subtile între `let` și `var`, dar ele nu contează pentru noi, încă. Le vom discuta în detaliu, mai târziu, în capitolul <info:var>.
 ````
 
-## A real-life analogy
+## O analogie din lumea reală
 
-We can easily grasp the concept of a "variable" if we imagine it as a "box" for data, with a uniquely-named sticker on it.
+Putem să înțelegem cu ușurință  conceptul de unei "variabile" dacă ne-o imaginăm ca și o "cutie" pentru date, cu un sticker, denumit unic, pe ea.
 
-For instance, the variable `message` can be imagined as a box labeled `"message"` with the value `"Hello!"` in it:
+De exemplu, variabila `message` poate fi imaginată ca o cutie etichetată cu `"message"`, cu valoarea `"Hello!"` înăuntrul ei:
 
 ![](variable.png)
 
-We can put any value into the box.
+Putem pune orice valoare în cutie.
 
-Also we can change it. The value can be changed as many times as needed:
+De asemenea o putem schimba. Valoarea poate fi schimbată de câte ori este nevoie:
 
 ```js run
 let message;
@@ -114,11 +114,11 @@ message = 'World!'; // value changed
 alert(message);
 ```
 
-When the value is changed, the old data is removed from the variable:
+Când valoarea este schimbată, vechile date sunt șterse din variabilă:
 
 ![](variable-change.png)
 
-We can also declare two variables and copy data from one into the other.
+Putem de asemenea declara două variabile și putem copia datele dintr-una într-alta.
 
 ```js run
 let hello = 'Hello world!';
@@ -136,11 +136,11 @@ alert(message); // Hello world!
 ```
 
 ```smart header="Functional languages"
-It may be interesting to know that there also exist [functional](https://en.wikipedia.org/wiki/Functional_programming) programming languages that forbid changing a variable value. For example, [Scala](http://www.scala-lang.org/) or [Erlang](http://www.erlang.org/).
+Poate părea interesant să știi că există limbaje de programare [funcționale](https://en.wikipedia.org/wiki/Functional_programming) care interzic schimbarea valorii unei variabile. De exemplu, [Scala](http://www.scala-lang.org/) sau [Erlang](http://www.erlang.org/).
 
-In such languages, once the value is stored "in the box", it's there forever. If we need to store something else, the language forces us to create a new box (declare a new variable). We can't reuse the old one.
+În astfel de limbaje, odată ce valoarea a fost stocată "în cutie" este acolo pentru totdeauna. Dacă trebuie să stocăm altceva, limbajul ne forțează să creăm o cutie nouă (declarăm o nouă variabilă). Nu o putem folosi pe cea veche.
 
-Though it may seem a little bit odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits. Studying such a language (even if not planning to use it soon) is recommended to broaden the mind.
+Deși ar putea părea puțin ciudat la prima vedere, aceste limbaje sunt destul de capabile de development serios. Mai mult decât atât, există zone precum procesare paralelă unde această limitație conferă anumite beneficii. Studierea unui astfel de limbaj (chiar dacă nu este planifict a fi folosit în curând) este recomandat pentru a mări orizonturile.
 ```
 
 ## Variable naming [#variable-naming]
