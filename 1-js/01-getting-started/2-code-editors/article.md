@@ -38,7 +38,7 @@ Următoarele opțiuni ar trebui să te intereseze:
 - [Atom](https://atom.io/) (cross-platform, gratuit).
 - [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, gratuit).
-- [Vim](http://www.vim.org/) și [Emacs](https://www.gnu.org/software/emacs/) sunt de asemenea dacă știi cum să le folosești.
+- [Vim](http://www.vim.org/) și [Emacs](https://www.gnu.org/software/emacs/) sunt de asemenea utile dacă știi cum să le folosești.
 
 ## Favoritele mele
 
@@ -46,13 +46,13 @@ Preferința personală a autorului este de a avea atât un IDE pentru proiecte c
 
 Eu folosesc:
 
-- [WebStorm](http://www.jetbrains.com/webstorm/) for JS, and if there is one more language in the project, then I switch to one of the other JetBrains offerings listed above.
-- As a lightweight editor -- [Sublime Text](http://www.sublimetext.com) or [Atom](https://atom.io/).
+- [WebStorm](http://www.jetbrains.com/webstorm/) pentru JS, și dacă mai există un alt limbaj în proiect, atunci trec pe una dintre ofertele ale JetBrains de mai sus.
+- Pe post de editor de categorie ușoară -- [Sublime Text](http://www.sublimetext.com) sau [Atom](https://atom.io/).
 
-## Let's not argue
+## Să nu ne certăm
 
-The editors in the lists above are those that either I or my friends whom I consider good developers have been using for a long time and are happy with.
+Editoarele din lista de mai sus sunt cele pe care fie eu sau prietenii mei, pe care îi consider dezvoltatori buni, le-am folosit pentru un timp îndelungat și suntem mulțumiți de ele.
 
-There are other great editors in our big world. Please choose the one you like the most.
+Există și alte editoare minunate în marea noastră lume. Te rog alege un editor pe care îl placi cel mai mult.
 
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, personal preferences.
+Alegerea unui editor, ca a oricărui alt tool, este individuală și depinde de proiectele tale, obiceiurile și preferințele personale.
