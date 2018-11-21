@@ -1,44 +1,44 @@
-# Code structure
+# Structura codului
 
-The first thing to study is the building blocks of the code.
+Primul lucru ce trebuie studiat este elementele fundamentale ale codului.
 
-## Statements
+## Afirmații (statements)
 
-Statements are syntax constructs and commands that perform actions.
+Statement-urile sunt constructorii de sintaxă și comenzile care realizează acțiuni.
 
-We've already seen a statement `alert('Hello, world!')`, which shows the message "Hello world!".
+Am văzut deja un statement `alert('Hello, world!')`, care arată mesajul "Hello world!".
 
-We can have as many statements in the code as we want. Another statement can be separated with a semicolon.
+Putem avea câte afirmații vrem, în cod. O altă afirmație poate fi separată cu punct și virgulă (;).
 
-For example, here we split the message into two:
+De exemplu, aici putem rupe mesajul în două:
 
 ```js run no-beautify
 alert('Hello'); alert('World');
 ```
 
-Usually each statement is written on a separate line -- thus the code becomes more readable:
+De obicei fiecare afirmație este scrisă pe o linie separată -- astfel codul devine mult mai lizibil:
 
 ```js run no-beautify
 alert('Hello');
 alert('World');
 ```
 
-## Semicolons [#semicolon]
+## Caracterele punct și virgulă [#semicolon]
 
-A semicolon may be omitted in most cases when a line break exists.
+Un caracter punct și virgulă poate fi omis în majoritatea cazurilor când există o rupere de linie (break line);
 
-This would also work:
+Asta ar funcționa de asemenea:
 
 ```js run no-beautify
 alert('Hello')
 alert('World')
 ```
 
-Here JavaScript interprets the line break as an "implicit" semicolon. That's also called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+Aici, JavaScript interpretează un line break ca și punct și virgulă "implicit". Aceasta este de asemenea denumită [inserție automată de punct și virgulă](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
 
-**In most cases a newline implies a semicolon. But "in most cases" does not mean "always"!**
+**În majoritatea cazurilor o linie nouă implică un caracter punct și virgulă. Dar "în majoritatea cazurilor" nu înseamnă "întotdeauna"!**
 
-There are cases when a newline does not mean a semicolon, for example:
+Există cazuri când o linie nouă nu înseamnă punct și virgulă, spre exemplu:
 
 ```js run no-beautify
 alert(3 +
@@ -46,22 +46,22 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+Codul returnează `6` pentru că JavaScript nu inserează punct și virgulă aici. Este în mod intuitiv evident faptul că dacă linia se termină cu un plus `"+"`, atunci aceasta este o "expresie incompletă", așa că punctul și virgula nu sunt necesare. Iar în acest caz totul funcționează precum se așteaptă.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**Dar există și situații când JavaScript "eșuează" în a intui un punct și virgulă unde este cu adevărat necesar.**
 
-Errors which occur in such cases are quite hard to find and fix.
+Erorile care apar în asemenea cazuri sunt destul de greu de găsit și reparat.
 
 ````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+Dacă ești curios să vezi un exemplu de astfel de eroare, aruncă o privire pe codul ăsta:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later, for now it does not matter. Let's just remember the result: it shows `1`, then `2`.
+Încă nu e nevoie să-ți bați capul în legătură cu ce reprezintă parantezele drepte `[]` sau `forEach`. Le vom studia mai târziu, pentru moment nu contează. Să ne reamintim rezultatul: se afișează `1`, apoi `2`.
 
-Now let's add an `alert` before the code and *not* finish it with a semicolon:
+Acum să adăugăm un `alert` înaintea codului și să *nu* încheiem cu punct și virgulă:
 
 ```js run no-beautify
 alert("There will be an error")
@@ -69,42 +69,41 @@ alert("There will be an error")
 [1, 2].forEach(alert)
 ```
 
-Now if we run it, only the first `alert` is shown, and then we have an error!
+Acum dacă îl rulăm, doar primul `alert` este afișat și apoi avem o eroare!
 
-But everything is fine again if we add a semicolon after `alert`:
+Dar totul este în regulă din nou dacă adăugăm un punct și virgulă după `alert`:
 ```js run
 alert("All fine now");
 
 [1, 2].forEach(alert)  
 ```
 
-Now we have the "All fine now" message and then `1` and `2`.
+Acum avem mesajul "All fine now", iar apoi `1` and `2`.
 
+Eroarea din varianta fărăr niciun punct și virgulă apare deoarece JavaScript nu adaugă un punct și virgulă înainte de parantezele drepte `[...]`.
 
-The error in the no-semicolon variant occurs because JavaScript does not imply a semicolon before square brackets `[...]`.
-
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. That's how the engine sees it:
+Așadar, pentru că punctul și virgula nu sunt auto-generate, codul din primul exemplu este tratat ca un singur statement. Așa îl vede engine-ul:
 
 ```js run no-beautify
 alert("There will be an error")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not a single one. Such a merging in this case is just wrong, hence the error. There are other situations when such a thing happens.
+Dar ar trebui să fie două afirmații separate, nu una singură. O astfel de îmbinare în acest caz este greșit, de aici și eroarea. Există alte situații când acest lucru se întâmplă.
 ````
 
-It's recommended to put semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Este recomandat să punem punct și virgulă între afirmații chiar dacă acestea sunt separate de caractere de linie nouă. Această regulă este larg adoptată de către comunitate. Să observăm din nou -- *este posibil* să nu punem punct și virgulă în majoritatea timpului. Dar este mai sigur -- în special pentru un începător -- să le folosească.
 
-## Comments
+## Comentarii
 
-As time goes on, the program becomes more and more complex. It becomes necessary to add *comments* which describe what happens and why.
+Pe măsură ce timpul trece, programul devine din ce în ce mai complex. Devine necesar să se adauge *comentarii* care să descrie ce se întâmplă și de ce.
 
-Comments can be put into any place of the script. They don't affect the execution because the engine simply ignores them.
+Comentariile pot fi puse în orice loc în script. Ele nu afecteazp execuția pentru că motorul pur și simplu le ignoră.
 
-**One-line comments start with two forward slash characters `//`.**
+**Comentariile pe o singură linie încep cu două caractere forward slash `//`.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Restul liniei este un comentariu. Poate ocupa o linie completă doar el sau poate să urmeze o afirmație. 
 
-Like here:
+Cum ar fi aici:
 ```js run
 // This comment occupies a line of its own
 alert('Hello');
@@ -112,9 +111,9 @@ alert('Hello');
 alert('World'); // This comment follows the statement
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Comentariile multilinie încep cu un forward slash și cu un asterisk <code>/&#42;</code> și se termină cu asterisk și cu un forward slash <code>&#42;/</code>.**
 
-Like this:
+Cum ar fi aici:
 
 ```js run
 /* An example with two messages.
@@ -124,9 +123,9 @@ alert('Hello');
 alert('World');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code> it won't execute.
+Conținutul comentariilor este ignorat, așa că dacă punem cod înăuntru <code>/&#42; ... &#42;/</code> acesta nu se va executa.
 
-Sometimes it comes in handy to temporarily disable a part of code:
+Câteodată vine la îndemână să dezactivăm temporar o parte din cod:
 
 ```js run
 /* Commenting out the code
@@ -136,13 +135,13 @@ alert('World');
 ```
 
 ```smart header="Use hotkeys!"
-In most editors a line of code can be commented out by `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac try `key:Cmd` instead of `key:Ctrl`.
+În majoritatea editoarelor o linie de cod poate fi comentată cu `tastele:Ctrl+/` pentru un comentariu single-line și cu `tastele:Ctrl+Shift+/` -- pentru comentarii multilinie (selectează o bucată de cod și apasă tastele arătate). Pnetru Mac încearcă `tasta:Cmd` în loc de `tasta:Ctrl`.
 ```
 
 ````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+Nu poate exista `/*...*/` în interiorul la `/*...*/`.
 
-Such code will die with an error:
+Astfel de cod va "muri" cu o eroare:
 
 ```js run no-beautify
 /*
@@ -152,8 +151,8 @@ alert( 'World' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Te rog, nu ezita să-ți comentezi codul.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify the code before publishing to the production server. They remove comments, so they don't appear in the working scripts. Therefore comments do not have any negative effects on production at all.
+Comentariile cresc urma globalp a codului, dar asta nu reprezintă o problemă. Există multe tool-uri care minimizează codul înainte ca acesta să fie publicat pe server-ul de producție. Sunt scoase comentariile, ca să nu apară în scripturile care sunt executate. Astfel comentariile nu au deloc efecte negative asupra producției.
 
-Further in the tutorial there will be a chapter <info:coding-style> that also explains how to write better comments.
+Mai departe în tutorial va fi un capitol <info:coding-style> care de asemenea explică cum să scrii comentarii mai bune.
