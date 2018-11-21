@@ -1,12 +1,12 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Show an alert
+# Afișează un alert
 
-Create a page that shows a message "I'm JavaScript!".
+Creează o pagină care afișează un mesaj "I'm JavaScript!".
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+Fă acest lucru în sandbox, pe hard drive-ul tău, nu contează, doar asigură-te că merge.
 
 [demo src="solution"]
 

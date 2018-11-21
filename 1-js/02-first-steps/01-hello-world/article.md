@@ -1,17 +1,17 @@
 # Hello, world!
 
-The tutorial that you're reading is about core JavaScript, which is platform-independent. Further on, you will learn Node.JS and other platforms that use it.
+Tutorialul pe care îl citești este despre core JavaScript, care este independent de platformă. Mai mult, vei învăța Node.JS și alte platforme care îl folosesc.
 
-But, we need a working environment to run our scripts, and, just because this book is online, the browser is a good choice. We'll keep the amount of browser-specific commands (like `alert`) to a minimum so that you don't spend time on them if you plan to concentrate on another environment like Node.JS. On the other hand, browser details are explained in detail in the [next part](/ui) of the tutorial.
+Dar, avem nevoie de un mediu de lucru pentru a rula scripturile noastre, și doar pentru că cartea aceasta este online, browser-ul este o alegere bună. Vom minimiza cantitatea de comenzi specifice browser-ului (precum `alert`) pentru ca tu să nu-ți petreci timpul cu ele dacă plănuiești să te concentrezi pe un alt mediu ca Node.JS. Pe de altă parte, detaliile despre browser sunt explicate  în detaliu în [următoarea parte](/ui) a tutorialului.
 
-So first, let's see how to attach a script to a webpage. For server-side environments, you can just execute it with a command like `"node my.js"` for Node.JS.
+Așadar pentru început, să vedem cum poți atașa un script pe o pagină web. Pentru medii server-side, îl poți executa cu o comandă ca `"node my.js"` pentru Node.JS.
 
 
-## The "script" tag
+## Eticheta "script" (Tag-ul "script")
 
-JavaScript programs can be inserted in any part of an HTML document with the help of the `<script>` tag.
+Programele JavaScript pot fi inserate în orice parte a unui document HTML cu ajutorul tagului `<script>`
 
-For instance:
+Spre exemplu:
 
 ```html run height=100
 <!DOCTYPE HTML>
@@ -35,25 +35,23 @@ For instance:
 ```
 
 ```online
-You can run the example by clicking on the "Play" button in its right-top corner.
+Poți rula exemplul făcând click pe butonul "Play" din colțul dreapta-sus.
 ```
 
-The `<script>` tag contains JavaScript code which is automatically executed when the browser meets the tag.
+Tag-ul `<script>` conține cod JavaScript care este executat în mod automat când browser-ul întâlneșete eticheta(tag-ul).
 
+## Marcarea modernă
 
-## The modern markup
+Eticheta `<script>` are câteva atribute care sunt destul de rar folosite în zilele noastre, dar le putem găsi în cod vechi:
 
-The `<script>` tag has a few attributes that are rarely used nowadays, but we can find them in old code:
+Atributul `type`: <code>&lt;script <u>type</u>=...&gt;</code>
+ : Vechiul standard HTML4 necesita ca un script să aibă tip. De obicei acesta era `type="text/javascript"`. Nu mai este necesar. De asemenea, standardul modern a schimbat total înțelesul acestui atribut. Acum el poate fi folosit pentru module JavaScript. Dar acesta este un subiect avansat; vom vorbi despre module mai târziu, într-o altă parte a tutorialului.
 
- The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
+Atributul `language`: <code>&lt;script <u>language</u>=...&gt;</code>
+  : Acest atribut era menit să afișeze limbajul script-ului. Acest atribut nu mai are sens, pentru JavaScript este limbajul implicit. Nu e necesar să-l folosim.
 
- : The old standard HTML4 required a script to have a type. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern standard totally changed the meaning of this attribute. Now it can be used for Javascript modules. But that's an advanced topic; we'll talk about modules later in another part of the tutorial. 
-
- The `language` attribute: <code>&lt;script <u>language</u>=...&gt;</code>
-  : This attribute was meant to show the language of the script. This attribute no longer makes sense, because JavaScript is the default language. No need to use it.
-
-Comments before and after scripts.
-: In really ancient books and guides, one may find comments inside `<script>`, like this:
+Comentarii înainte și după script-uri.
+: În cărțiile și ghidurile destul de antice, pot fi găsite comentarii înăuntr-ul `<script>`, astfel:
 
     ```html no-beautify
     <script type="text/javascript"><!--
@@ -61,30 +59,30 @@ Comments before and after scripts.
     //--></script>
     ```
 
-    This trick isn't used in modern JavaScript. These comments were used to hide the JavaScript code from old browsers that didn't know about a `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+    Acest truc nu este folosit în JavaScript-ul modern. Aceste comentarii erau folosite pentru a ascunde codul JavaScript de browserele vechi care nu știau de tag-ul `<script>`. Cum browserele lansate în ultimii 15 ani nu au această problemă, acest tip de comentariu te poate ajuta să identifici cod cu adevărat vechi. 
 
 
-## External scripts
+## Script-uri externe
 
-If we have a lot of JavaScript code, we can put it into a separate file.
+Dacă avem mult cod JavaScript, îl putem pune într-un fișier separat.
 
-The script file is attached to HTML with the `src` attribute:
+Fișierul script este atașat HTML-ului cu atributul `src`:
 
 ```html
 <script src="/path/to/script.js"></script>
 ```
 
-Here `/path/to/script.js` is an absolute path to the file with the script (from the site root).
+Aici `/path/to/script.js` este o cale absolută către fișierul cu script-ul(din site-ul rădăcină).
 
-It is also possible to provide a path relative to the current page. For instance, `src="script.js"` would mean a file `"script.js"` in the current folder.
+Este de asemenea posibil să furnizezi o cale relativă către pagina curentă. De exemplu, `src="script.js"` înseamnă un fișier `"script.js"` în folder-ul curent.
 
-We can give a full URL as well. For instance:
+Putem da un URL complet de asemenea. De exemplu:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
 ```
 
-To attach several scripts, use multiple tags:
+Pentru a atașa mai multe script-uri, folosim etichetele:
 
 ```html
 <script src="/js/script1.js"></script>
@@ -93,19 +91,19 @@ To attach several scripts, use multiple tags:
 ```
 
 ```smart
-As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+Ca și regulă, doar script-urile cele mai simple sunt puse în HTML. Cele mai complexe vor sta în fișiere separate.
 
-The benefit of a separate file is that the browser will download it and then store it in its [cache](https://en.wikipedia.org/wiki/Web_cache).
+Beneficiul unui fișier separat este că browser-ul îl va descărca și îl va stoca în [cache](https://en.wikipedia.org/wiki/Web_cache).
 
-After this, other pages that want the same script will take it from the cache instead of downloading it. So the file is actually downloaded only once.
+După aceasta, alte pagini care vor vrea același script îl vor lua din cache în loc să-l descarce. Așadar fișierul este defapt descărcat doar odată.
 
-That saves traffic and makes pages faster.
+Acest lucru salvează trafic și face paginile mai rapide.
 ```
 
 ````warn header="If `src` is set, the script content is ignored."
-A single `<script>` tag can't have both the `src` attribute and the code inside.
+Un singur tag `<script>` nu poate avea atât atributul `src` cât și cod în interior.
 
-This won't work:
+Asta nu va merge:
 
 ```html
 <script *!*src*/!*="file.js">
@@ -113,9 +111,9 @@ This won't work:
 </script>
 ```
 
-We must choose: either it's an external `<script src="…">` or a regular `<script>` with code.
+Trebuie să alegem: ori este un script extern `<script src="…">` ori unul obișnuit `<script>` cu cod.
 
-The example above can be split into two scripts to work:
+Exemplul de mai sus poate fi rupt în două script-uri pentru a funcționa:
 
 ```html
 <script src="file.js"></script>
@@ -125,11 +123,10 @@ The example above can be split into two scripts to work:
 ```
 ````
 
-## Summary
+## Rezumat
 
-- We can use a `<script>` tag to add JavaScript code to the page.
-- The `type` and `language` attributes are not required.
-- A script in an external file can be inserted with `<script src="path/to/script.js"></script>`.
+- Putem folosi eticheta `<script>` pentru a adăuga cod JavaScript paginii.
+- Atributele `type` și `language` nu sunt necesare.
+- Un script dintr-un fișier extern poate fi inserat cu `<script src="path/to/script.js"></script>`.
 
-
-There is much more to learn about browser scripts and their interaction with the web-page. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves from it. We'll be using a browser as a way to run JavaScript, which is very convenient for online reading, but yet one of many.
+Mai este mult de învățat despre script-urile de browser și interacțiunile lor cu pagina web. Dar să ne amintim că această parte a tutorialului este dedicată limbajului JavaScript, așa că nu ar trebui să ne distragem atenția de la acest lucru. Vom folosi un browser ca mijloc de rulare a JavaScript-ului, ceea ce este foarte convenabil pentru citirea online, dar totuși unul dintre multe altele.
