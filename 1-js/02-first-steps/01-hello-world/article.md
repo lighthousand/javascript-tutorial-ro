@@ -1,10 +1,10 @@
 # Hello, world!
 
-Tutorialul pe care îl citești este despre core JavaScript, care este independent de platformă. Mai mult, vei învăța Node.JS și alte platforme care îl folosesc.
+Tutorialul pe care îl citești este despre JavaScript core, care este independent de platformă. Mai mult, vei învăța Node.JS și alte platforme care îl folosesc.
 
 Dar, avem nevoie de un mediu de lucru pentru a rula scripturile noastre, și doar pentru că cartea aceasta este online, browser-ul este o alegere bună. Vom minimiza cantitatea de comenzi specifice browser-ului (precum `alert`) pentru ca tu să nu-ți petreci timpul cu ele dacă plănuiești să te concentrezi pe un alt mediu ca Node.JS. Pe de altă parte, detaliile despre browser sunt explicate  în detaliu în [următoarea parte](/ui) a tutorialului.
 
-Așadar pentru început, să vedem cum poți atașa un script pe o pagină web. Pentru medii server-side, îl poți executa cu o comandă ca `"node my.js"` pentru Node.JS.
+Așadar pentru început, să vedem cum poți atașa un script pe o pagină web. Pentru medii server-side îl poți executa cu o comandă ca `"node my.js"` pentru Node.JS.
 
 
 ## Eticheta "script" (Tag-ul "script")
@@ -38,14 +38,14 @@ Spre exemplu:
 Poți rula exemplul făcând click pe butonul "Play" din colțul dreapta-sus.
 ```
 
-Tag-ul `<script>` conține cod JavaScript care este executat în mod automat când browser-ul întâlneșete eticheta(tag-ul).
+Tag-ul `<script>` conține cod JavaScript care este executat în mod automat când browser-ul întâlneșete eticheta (tag-ul).
 
 ## Marcarea modernă
 
 Eticheta `<script>` are câteva atribute care sunt destul de rar folosite în zilele noastre, dar le putem găsi în cod vechi:
 
 Atributul `type`: <code>&lt;script <u>type</u>=...&gt;</code>
- : Vechiul standard HTML4 necesita ca un script să aibă tip. De obicei acesta era `type="text/javascript"`. Nu mai este necesar. De asemenea, standardul modern a schimbat total înțelesul acestui atribut. Acum el poate fi folosit pentru module JavaScript. Dar acesta este un subiect avansat; vom vorbi despre module mai târziu, într-o altă parte a tutorialului.
+  : Vechiul standard HTML4 necesita ca un script să aibă tip. De obicei acesta era `type="text/javascript"`. Nu mai este necesar. De asemenea, standardul modern a schimbat total înțelesul acestui atribut. Acum el poate fi folosit pentru module JavaScript. Dar acesta este un subiect avansat; vom vorbi despre module mai târziu, într-o altă parte a tutorialului.
 
 Atributul `language`: <code>&lt;script <u>language</u>=...&gt;</code>
   : Acest atribut era menit să afișeze limbajul script-ului. Acest atribut nu mai are sens, pentru JavaScript este limbajul implicit. Nu e necesar să-l folosim.
