@@ -1,6 +1,6 @@
-# Data types
+# Tipuri de date
 
-A variable in JavaScript can contain any data. A variable can at one moment be a string and later receive a numeric value:
+O variabilă în JavaScript poate conține orice fel de date. O variabilă poate fi la un moment dat un string, iar mai târziu poate primi o valoare numerică:
 
 ```js
 // no error
@@ -8,63 +8,63 @@ let message = "hello";
 message = 123456;
 ```
 
-Programming languages that allow such things are called "dynamically typed", meaning that there are data types, but variables are not bound to any of them.
+Limbajele de programare care permit un astfel de lucru se numesc "tipizate dinamic" (dynamically typed), aceasta însemnând că există tipuri de date, dar variabilele nu sunt legate de nici unul dintre ele.
 
-There are seven basic data types in JavaScript. Here we'll study the basics, and in the next chapters we'll talk about each of them in detail.
+Există șapte tipuri de date de bază în JavaScript. Aici le vom studia pe cele de bază, iar în capitolele următoare vom vorbi despre ele, separat, în detaliu.
 
-## A number
+## Un număr
 
 ```js
 let n = 123;
 n = 12.345;
 ```
 
-The *number* type serves both for integer and floating point numbers.
+Tipul *number* servește atât ca întreg cât și ca număr real (floating point).
 
-There are many operations for numbers, e.g. multiplication `*`, division `/`, addition `+`, subtraction `-` and so on.
+Există multe operații pentru numere, de exemplu înmulțirea `*`, împărțirea `/`, adunarea `+`, scăderea `-` și așa mai departe.
 
-Besides regular numbers, there are so-called "special numeric values" which also belong to that type: `Infinity`, `-Infinity` and `NaN`.
+În afară de numerele obișnuite, mai există așa-numitele "valori numerice speciale" care aparțin de asemenea acelui tip: `Infinity`, `-Infinity` și `NaN`. 
 
-- `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
+- `Infinity` reprezintă [infinitul matematic](https://en.wikipedia.org/wiki/Infinity) ∞. Este o valoare specială care este mai mare decât orice alt număr.
 
-    We can get it as a result of division by zero:
+    O putem obține ca și rezultat al împărțirii la zero:
 
     ```js run
     alert( 1 / 0 ); // Infinity
     ```
 
-    Or just mention it in the code directly:
+    Sau menționând-o direct, în cod:
 
     ```js run
     alert( Infinity ); // Infinity
     ```
-- `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+- `NaN` reprezintă o eroare de procesare. Este rezultatul unei operații incorecte sau nedefinite, de exemplu:
 
     ```js run
     alert( "not a number" / 2 ); // NaN, such division is erroneous
     ```
 
-    `NaN` is sticky. Any further operation on `NaN` would give `NaN`:
+    `NaN` este lipicios. Orice operație asupra lui `NaN` va da `NaN`:
 
     ```js run
     alert( "not a number" / 2 + 5 ); // NaN
     ```
 
-    So, if there's `NaN` somewhere in a mathematical expression, it propagates to the whole result.
+    Așa că, dacă există `NaN` undeva într-o expresie matematică, se va propaga în întregul rezultat. 
 
 ```smart header="Mathematical operations are safe"
-Doing maths is safe in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+Calculul matematic este sigur în JavaScript. Putem face orice: împărțire la zero, tratarea de string-uri non-numerice ca și numere, etc.
 
-The script will never stop with a fatal error ("die"). At worst we'll get `NaN` as the result.
+Script-ul nu se va opri niciodată cu o eroare fatală ("moare"). În cel mai rău caz vom obține `NaN` ca și rezultat.
 ```
 
-Special numeric values formally belong to the "number" type. Of course they are not numbers in a common sense of this word.
+Valorile numerice speciale aparțin în mod formal tipului "number". Desigur ele nu sunt numere în adevăratul sens al cuvântului.
 
-We'll see more about working with numbers in the chapter <info:number>.
+Vom vedea mai multe despre lucrul cu numere în capitolul <info:number>.
 
-## A string
+## Un string
 
-A string in JavaScript must be quoted.
+Un string în JavaScript trebuie să fie între ghilimele.
 
 ```js
 let str = "Hello";
@@ -72,15 +72,15 @@ let str2 = 'Single quotes are ok too';
 let phrase = `can embed ${str}`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+În JavaScript, există 3 tipuri de ghilimele.
 
 1. Double quotes: `"Hello"`.
 2. Single quotes: `'Hello'`.
 3. Backticks: <code>&#96;Hello&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's no difference between them in JavaScript.
+Ghilimelele duble și apostroafele sunt "pur și simplu" ghilimele. Nu există nicio diferență între ele, în JavaScript.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Backtick-urile sunt ghilimele pentru "extindere a funcționalității". Ele ne permit să încorporăm variabile și expresii într-un string, învelindu-le în `${…}`, spre exemplu:
 
 ```js run
 let name = "John";
@@ -92,35 +92,35 @@ alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
 alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+Expresia dinăuntrul `${…}` este evaluată, iar rezultatul devine parte din string. Putem pune orice acolo: o variabilă precum `name` sau o expresie aritmetică ca și `1 + 2` sau ceva mult mai complex.
 
-Please note that this can only be done in backticks. Other quotes do not allow such embedding!
+Te rog observă ca acest lucru poate fi făcut doar cu backticks. Alte ghilimele nu permit astfel de încorporare!
 ```js run
 alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+Vom acoperi string-urile mult mai detaliat în capitolul <info:string>.
 
 ```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is `char`.
+În unele limbaje există un tip "character" special, pentru un singur caracter. De exemplu, în limbajul C și în Java acesta este `char`.
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
+În JavaScript nu există un astfel de tip. Este prezent doar un singur tip: `string`. Un string poate fi format din doar un caracter sau din mai multe.
 ```
 
-## A boolean (logical type)
+## Un boolean (tipul logic)
 
-The boolean type has only two values: `true` and `false`.
+Tipul boolean are doar două valori: `true` (adevărat) și `false` (fals).
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Acest tip este folosit de obicei pentru a stoca valorile da/nu (yes/no): `true` înseamnă "yes, correct", și `false` înseamnă "no, incorrect".
 
-For instance:
+De exemplu:
 
 ```js
 let nameFieldChecked = true; // yes, name field is checked
 let ageFieldChecked = false; // no, age field is not checked
 ```
 
-Boolean values also come as a result of comparisons:
+Valorile booleene pot apărea ca și rezultat al comparărilor:
 
 ```js run
 let isGreater = 4 > 1;
@@ -128,31 +128,31 @@ let isGreater = 4 > 1;
 alert( isGreater ); // true (the comparison result is "yes")
 ```
 
-We'll cover booleans more deeply later in the chapter <info:logical-operators>.
+Vom acoperi booleenele mai în profunzime, mai târziu, în capitolul <info:logical-operators>.
 
-## The "null" value
+## Valoarea "null"
 
-The special `null` value does not belong to any type of those described above.
+Valoarea specială `null` nu aparține niciunui tip din cele descrise mai sus.
 
-It forms a separate type of its own, which contains only the `null` value:
+Formează un tip separat numai al său, care conține doar valoarea `null`:
 
 ```js
 let age = null;
 ```
 
-In JavaScript `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+În JavaScript `null` nu este o "referință către un obiect inexistent" sau un "pointer null" ca în alte limbaje.
 
-It's just a special value which has the sense of "nothing", "empty" or "value unknown".
+Este doar o valoare specială care are înțelesul de "nimic", "gol" sau "valoare necunoscută".
 
-The code above states that the `age` is unknown or empty for some reason.
+Codul de mai sus afirmă că `age` este necunoscut sau gol dintr-un motiv anume.
 
-## The "undefined" value
+## Valoarea "undefined"
 
-The special value `undefined` stands apart. It makes a type of its own, just like `null`.
+Valoarea specială `undefined` este izolată. Își creează propriul său tip, la fel ca `null`.
 
-The meaning of `undefined` is "value is not assigned".
+Înțelesul lui `undefined` este "valoarea nu este atribuită".
 
-If a variable is declared, but not assigned, then its value is exactly `undefined`:
+Dacă o variabilă este declarată, dar nu este asignată, atunci valoarea acesteia este exact `undefined`:
 
 ```js run
 let x;
@@ -160,7 +160,7 @@ let x;
 alert(x); // shows "undefined"
 ```
 
-Technically, it is possible to assign `undefined` to any variable:
+Din punct de vedere tehnic este posibil să asignăm `undefined` oricărei variabile:
 
 ```js run
 let x = 123;
@@ -170,13 +170,13 @@ x = undefined;
 alert(x); // "undefined"
 ```
 
-...But it's not recommended to do that. Normally, we use `null` to write an "empty" or an "unknown" value into the variable, and `undefined` is only used for checks, to see if the variable is assigned or similar.
+...Dar nu este recomandat să facem asta. În mod normal, vom folosi `null` pentru a scrie o valoare "goală" sau "necunoscută" într-o variabilă, și `undefined` este folosit doar pentru verificări, pentru a vedea dacă variabila este atribuită, sau asemăntor.
 
-## Objects and Symbols
+## Obiecte și simboluri
 
-The `object` type is special.
+Tipul `object` este special.
 
-All other types are called "primitive", because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter <info:object> after we know enough about primitives.
+Toate celelalte tipuri sunt numite "primitive", pentru că valorile lor pot conține doar un singur lucru (fie un string sau un număr sau orice altceva). În contrast, obiectele sunt folosite pentru a stoca colecții de date și entități mult mai complexe. Vom avea de aface cu ele mai târziu, în capitolul <info:object>, după ce aflăm mai multe despre primitive.
 
 The `symbol` type is used to create unique identifiers for objects. We have to mention it here for completeness, but it's better to study them after objects.
 

@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# String quotes
+# String-uri cu ghilimele
 
-What is the output of the script?
+Ce returnează următorul script?
 
 ```js
 let name = "Ilya";

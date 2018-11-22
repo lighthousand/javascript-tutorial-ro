@@ -1,5 +1,5 @@
 
-Backticks embed the expression inside `${...}` into the string.
+Backtick-urile (backticks) încorporează expresia înăuntrul la `${...}` în string.
 
 ```js run
 let name = "Ilya";
