@@ -52,7 +52,7 @@ Putem de asemenea declara variabile multiple pe o singură linie:
 let user = 'John', age = 25, message = 'Hello';
 ```
 
-Asta ar putea părea scurt, dar nu este neapărat recomandat. De dragul lizibilității mai mari, te rog folosește o singurp linie per variabilă.
+Asta ar putea părea scurt, dar nu este neapărat recomandat. De dragul lizibilității, te rog folosește o singură linie per variabilă.
 
 Varianta multilinie este un pic mai lungă, dar mai ușor de citit:
 
@@ -87,14 +87,14 @@ Din punct de vedere tehnic toate aceste variante fac același lucru. Așadar est
 *!*var*/!* message = 'Hello';
 ```
 
-Cuvântul cheie `var` este *aproape* la fel ca `let`. Declară de asemenea o variabilă, dar într-o manieră "old-school", puțin diferită.
+Cuvântul cheie `var` este *aproape* la fel ca `let`. Declară de asemenea o variabilă, dar într-o manieră "de modă veche", puțin diferită.
 
 Există diferențe subtile între `let` și `var`, dar ele nu contează pentru noi, încă. Le vom discuta în detaliu, mai târziu, în capitolul <info:var>.
 ````
 
 ## O analogie din lumea reală
 
-Putem să înțelegem cu ușurință  conceptul de unei "variabile" dacă ne-o imaginăm ca și o "cutie" pentru date, cu un sticker, denumit unic, pe ea.
+Putem să înțelegem cu ușurință  conceptul unei "variabile" dacă ne-o imaginăm ca și o "cutie" pentru date, cu un sticker, denumit unic, pe ea.
 
 De exemplu, variabila `message` poate fi imaginată ca o cutie etichetată cu `"message"`, cu valoarea `"Hello!"` înăuntrul ei:
 
@@ -140,7 +140,7 @@ Poate părea interesant să știi că există limbaje de programare [funcțional
 
 În astfel de limbaje, odată ce valoarea a fost stocată "în cutie" este acolo pentru totdeauna. Dacă trebuie să stocăm altceva, limbajul ne forțează să creăm o cutie nouă (declarăm o nouă variabilă). Nu o putem folosi pe cea veche.
 
-Deși ar putea părea puțin ciudat la prima vedere, aceste limbaje sunt destul de capabile de development serios. Mai mult decât atât, există zone precum procesare paralelă unde această limitație conferă anumite beneficii. Studierea unui astfel de limbaj (chiar dacă nu este planifict a fi folosit în curând) este recomandat pentru a mări orizonturile.
+Deși ar putea părea puțin ciudat la prima vedere, aceste limbaje sunt destul de capabile de development serios. Mai mult decât atât, există zone precum procesare paralelă unde această limitație conferă anumite beneficii. Studierea unui astfel de limbaj (chiar dacă nu este planificat a fi folosit în curând) este recomandat pentru a mări orizonturile.
 ```
 
 ## Denumirea variabilelor [#variable-naming]
@@ -157,7 +157,7 @@ let userName;
 let test123;
 ```
 
-Când numele conține mai multe cuvinte, în mod normal este folosit [camelCase](https://en.wikipedia.org/wiki/CamelCase). Asta înseamnă: cuvintele se pun unele după celelalte, fiecare cuvânt începe cu o majusculă: `myVeryLongName`.
+Când numele conține mai multe cuvinte, în mod normal este folosit [camelCase](https://en.wikipedia.org/wiki/CamelCase). Asta înseamnă că: cuvintele se pun unele după celelalte, fiecare cuvânt începe cu o majusculă: `myVeryLongName`.
 
 Ce este interesant -- semnul dolar `'$'` și underscore `'_'` pot fi de asemenea folosite în denumiri. Ele sunt simboluri obișnuite, ca și literele, fără un înțeles special.
 
@@ -170,7 +170,7 @@ let _ = 2; // and now a variable with the name "_"
 alert($ + _); // 3
 ```
 
-Exemple de denumiri ale variabilelor incorecte:
+Exemple de denumiri incorecte ale variabilelor:
 
 ```js no-beautify
 let 1a; // cannot start with a digit
@@ -194,7 +194,7 @@ Din punct de vedere tehnic aici nu este nici o eroare, astfel de denumiri sunt p
 ````
 
 ````warn header="Reserved names"
-Există o [listă de cuvinte rezervate](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), ce nu pot fi folosite pe post de denumire de variabile, pentru că  ele sunt folosite de limbajul însăși.
+Există o [listă de cuvinte rezervate](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), ce nu pot fi folosite pe post de denumire de variabile, pentru că ele sunt folosite de limbajul însăși.
 
 De exemplu, cuvintele `let`, `class`, `return`, `function` sunt rezervate.
 
@@ -291,31 +291,31 @@ Cu alte cuvinte, constantele denumite cu majusculă sunt folosite doar ca și al
 
 Vorbind de variabile, mai este un lucru extrem de important.
 
-Te rog denumește variabilele chibzuit. Ia-ți timp și gândeștete dacă este necesar.
+Te rog denumește variabilele chibzuit. Ia-ți timp și gândește-te dacă este necesar.
 
-Denumirea variabilelor este una dintre cele mai importante și mai complexe abilități din programare. O scurtă privire la numele variabilelor poate descoperi care cod este scris de un începător și care este scris de un developer experimentat.
+Denumirea variabilelor este una dintre cele mai importante și mai complexe abilități în programare. O scurtă privire la numele variabilelor poate descoperi care cod este scris de un începător și care este scris de un developer experimentat.
 
-Într-un proiect real, marea parte a timpului este petrecută modificând și extinzând codul de bază deja existent, și nu scriind ceva complet separat, de la zero. Iar atunci când ne reîntoarcem la cod după ceva timp în care am făcut altceva este mult mai ușor să găsim informații care sunt corect denumite. Sau cu alte cuvinte când variabilele au nume potrivite.
+Într-un proiect real, marea parte a timpului este petrecută modificând și extinzând codul de bază deja existent, și nu scriind ceva complet separat, de la zero. Iar atunci când ne reîntoarcem la cod, după ceva timp în care am făcut altceva, este mult mai ușor să găsim informații care sunt corect denumite. Sau, cu alte cuvinte, când variabilele au nume potrivite.
 
-Te rog, petrece ceva timp gândindu-te la denumirea potrivită a unei variabile înainte de a o declara. Acest lucru de va răsplăti mult.
+Te rog, petrece ceva timp gândindu-te la denumirea potrivită a unei variabile înainte de a o declara. Acest lucru te va răsplăti mult.
 
-Câteva reguli bune de urmat ar fi:
+Câteva reguli bine de urmat ar fi:
 
-- Folosește denumiri ce pot fi citite de către oameni precum `userName` sau `shoppingCart`.
-- Stai departe de abrevieri sau nu scurte ca `a`, `b`, `c`, doar dacă chiar știi ce faci.
-- Fă denumirea maxim descriptivă și concisă. Exemple de nume rele sunt `data` and `value`. Un astfel de nume nu spune nimic. Este în regulă să le folosim doar dacă este excepțional de evident , din context, ce date sau valori se vor a fi.
+- Folosește denumiri ce pot fi citite de către oameni, precum `userName` sau `shoppingCart`.
+- Stai departe de abrevieri sau denumiri scurte ca `a`, `b`, `c`, în afara cazului ăn care chiar știi ce faci.
+- Fă denumirea maxim descriptivă și concisă. Exemple de nume rele sunt `data` și `value`. Un astfel de nume nu spune nimic. Este în regulă să le folosim doar dacă este excepțional de evident , din context, ce date sau valori se vor a fi.
 - Pune-te de acord cu echipa și cu propria ta minte. Dacă un vizitator al site-ului este numit "user" atunci ar trebui să denumim variabililele care au legătură ca și `currentUser` sau `newUser`, dar nu ca și `currentVisitor` sau `newManInTown`.
 
-Sună simplu? Într-adevăr este, dar în practică, crearea de nume descriptive și concies nu este așa. Du-te!
+Sună simplu? Într-adevăr este, dar în practică, crearea de nume descriptive și concise nu este așa. Du-te!
 
 ```smart header="Reuse or create?"
 Ca și o ultimă observație. Există programatori leneși care în loc să  declare o variabilă nouă tind să reutilizeze variabile deja existente.
 
-Ca și rezultat variabila este ca o cutie unde oamenii aruncă diferite lucruri fără a schimba eticheta. Ce este acum înăuntru? Cine știe... Trebuie să ne apropiem și să verificăm.
+Ca și concluzie, variabila este ca o cutie unde oamenii aruncă diferite lucruri fără a schimba eticheta. Ce este acum înăuntru? Cine știe... Trebuie să ne apropiem și să verificăm.
 
 Un astfel de programator câștigă puțin ca declarație a variabilelor, dar pierde de zece ori mai mult pe debugging-ul codului.
 
-O variabilă în plus este bine, nu malefic.
+O variabilă în plus este în regulă, nu este malefic.
 
 Minificatoarele moderne de JavaScript și browserele optimizează codul destul de bine, așa că nu va creea probleme de performanță. Folosirea a diferite variabile pentru valori diferite poate chiar ajuta motorul să optimizeze.
 ```
@@ -325,7 +325,7 @@ Minificatoarele moderne de JavaScript și browserele optimizează codul destul d
 Putem declara variabile pentru a stoca date. Acest lucru poate fi făcut folosind `var` sau `let` sau `const`.
 
 - `let` -- este o declarație de variabilă modernă. Codul trebuie să fie în modul strict pentru a utiliza `let` în Chrome (V8).
-- `var` -- este o declarație de variabilă de modă veche. În mod normal nu le folosim pe toate, dar vom acoperi diferențele subtile ale `let` în capitolul <info:var>, în cazul în care ai nevoie de ele.
-- `const` -- este ca `let`, dar valoarea variabile nu poate fi modificată.
+- `var` -- este o declarație de variabilă de modă veche. În mod normal nu le folosim pe toate, dar vom acoperi diferențele subtile ale lui `let` în capitolul <info:var>, în cazul în care ai nevoie de ele.
+- `const` -- este ca `let`, dar valoarea variabilei nu poate fi modificată.
 
-Variabilele ar trebui denumite într-un mod în care să ne permită să înțelegem ușor ce se află înăuntru.
+Variabilele ar trebui denumite într-un mod care să ne permită să înțelegem ușor, ce se află înăuntru.
