@@ -10,7 +10,7 @@ message = 123456;
 
 Limbajele de programare care permit un astfel de lucru se numesc "tipizate dinamic" (dynamically typed), aceasta însemnând că există tipuri de date, dar variabilele nu sunt legate de nici unul dintre ele.
 
-Există șapte tipuri de date de bază în JavaScript. Aici le vom studia pe cele de bază, iar în capitolele următoare vom vorbi despre ele, separat, în detaliu.
+Există șapte tipuri de date fundamentale, în JavaScript. Aici le vom studia pe cele de bază, iar în capitolele următoare vom vorbi despre ele, separat, în detaliu.
 
 ## Un număr
 
@@ -78,7 +78,7 @@ let phrase = `can embed ${str}`;
 2. Single quotes: `'Hello'`.
 3. Backticks: <code>&#96;Hello&#96;</code>.
 
-Ghilimelele duble și apostroafele sunt "pur și simplu" ghilimele. Nu există nicio diferență între ele, în JavaScript.
+Ghilimelele duble și apostroafele sunt la fel. Nu există nicio diferență între ele, în JavaScript.
 
 Backtick-urile sunt ghilimele pentru "extindere a funcționalității". Ele ne permit să încorporăm variabile și expresii într-un string, învelindu-le în `${…}`, spre exemplu:
 
@@ -102,9 +102,9 @@ alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do n
 Vom acoperi string-urile mult mai detaliat în capitolul <info:string>.
 
 ```smart header="There is no *character* type."
-În unele limbaje există un tip "character" special, pentru un singur caracter. De exemplu, în limbajul C și în Java acesta este `char`.
+În unele limbaje există un tip "caracter", special, pentru un singur caracter. De exemplu, în limbajul C și în Java acesta este `char`.
 
-În JavaScript nu există un astfel de tip. Este prezent doar un singur tip: `string`. Un string poate fi format din doar un caracter sau din mai multe.
+În JavaScript nu există un astfel de tip. Este prezent doar un singur tip: `string`. Un string poate fi format doar dintr-un un caracter sau din mai multe.
 ```
 
 ## Un boolean (tipul logic)
@@ -170,7 +170,7 @@ x = undefined;
 alert(x); // "undefined"
 ```
 
-...Dar nu este recomandat să facem asta. În mod normal, vom folosi `null` pentru a scrie o valoare "goală" sau "necunoscută" într-o variabilă, și `undefined` este folosit doar pentru verificări, pentru a vedea dacă variabila este atribuită, sau asemăntor.
+...Dar nu este recomandat să facem asta. În mod normal, vom folosi `null` pentru a pune o valoare "goală" sau "necunoscută" într-o variabilă, și `undefined` este folosit doar pentru verificări, pentru a vedea dacă variabila este atribuită, sau asemăntor.
 
 ## Obiecte și simboluri
 
@@ -220,13 +220,13 @@ typeof alert // "function"  (3)
 Ultimele trei linii ar putea avea nevoie de explicații adiționale:
 
 1. `Math` este un obiect built-in (încorporat) care furnizează operații matematice. Îl vom învăța în capitolul <info:number>. Aici servește doar ca și exemplu de obiect.
-2. Rezultatul lui `typeof null` este `"object"`. Ceea ce este greșit. Este o eroare recunoscută oficial a lui `typeof`, păstrată pentru compatibilitate. Desigur, `null` nu este un obiect. Este o valoare specială cu un tip separat al său. Așadar, din nou, Aceasta este o eroare a limbajului.
+2. Rezultatul lui `typeof null` este `"object"`. Ceea ce este greșit. Este o eroare recunoscută oficial, a lui `typeof`, păstrată pentru compatibilitate. Desigur, `null` nu este un obiect. Este o valoare specială, cu un tip separat al său. Așadar, din nou, aceasta este o eroare a limbajului.
 3. Rezultatul lui `typeof alert` este `"function"`, pentru că `alert` este o funcție a limbajului. Vom studia funcțiile în capitolul următor și vom vedea că nu există nici o funcție specială pe nume "function", în limbaj. Funcțiile aparțin tipului obiect. Dar `typeof` le tratează în mod diferit. Din punct de vedere formal este incorect, dar este foarte convenabil în practică.
 
 
 ## Rezumat
 
-Există 7 tipuri de bază în JavaScrit.
+Există 7 tipuri de bază în JavaScript.
 
 - `number` pentru numere de orice gen: întregi sau reale.
 - `string` pentru string-uri. Un string poate avea unul sau mai multe caractere, nu există niciun tip separat pentru un singur caracter.
@@ -240,6 +240,6 @@ Operatorul `typeof` ne permite să vedem ce tip este stocat în variabilă.
 
 - Două forme: `typeof x` sau `typeof(x)`. 
 - Returnează un string cu numele tipului, precum `"string"`.
-- Pentru `null` returnează `"object"` -- aceasta este o eroare în limbaj, nu este un obiect, defapt.
+- Pentru `null` returnează `"object"` -- aceasta este o eroare în limbaj, nu este un obiect.
 
-În următoarele capitole ne vom concentra pe valorile primitive și odată ce suntem familiarizați cu ele, vom trece la obiecte.
+În următoarele capitole ne vom concentra pe valorile primitive și odată ce suntem familiarizați cu ele vom trece la obiecte.
