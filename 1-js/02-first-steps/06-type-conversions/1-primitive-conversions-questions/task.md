@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Type conversions
+# Conversia tipurilor
 
-What are results of these expressions?
+Care sunt rezultatele acestor expresii?
 
 ```js no-beautify
 "" + 1 + 0
@@ -23,4 +23,4 @@ null + 1
 undefined + 1
 ```
 
-Think well, write down and then compare with the answer.
+Gândește bine, scrie apoi compară cu rezultatul.
