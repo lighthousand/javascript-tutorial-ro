@@ -178,20 +178,20 @@ Tipul `object` este special.
 
 Toate celelalte tipuri sunt numite "primitive", pentru că valorile lor pot conține doar un singur lucru (fie un string sau un număr sau orice altceva). În contrast, obiectele sunt folosite pentru a stoca colecții de date și entități mult mai complexe. Vom avea de aface cu ele mai târziu, în capitolul <info:object>, după ce aflăm mai multe despre primitive.
 
-The `symbol` type is used to create unique identifiers for objects. We have to mention it here for completeness, but it's better to study them after objects.
+Tipul `symbol` este folosit pentru a creea identificatori unici pentru obiecte. Trebuie să menționăm aici pentru completitudine, dar este mai bine să le studiezi după obiecte. 
 
-## The typeof operator [#type-typeof]
+## Operatorul typeof [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently, or just want to make a quick check.
+Operatorul `typeof` returnează tipul argumentului. Este folositor atunci când vrem să procesăm valori de tipuri diferite, în mod diferit, sau doar vrem să facem o verificare rapidă.
 
-It supports two forms of syntax:
+Suportă două forme de sintaxă:
 
-1. As an operator: `typeof x`.
-2. Function style: `typeof(x)`.
+1. Ca și operator: `typeof x`.
+2. Ca funcție: `typeof(x)`.
 
-In other words, it works both with parentheses or without them. The result is the same.
+Cu alte cuvinte funcționează cu sau fără paranteze. Rezultatul este același.
 
-The call to `typeof x` returns a string with the type name:
+Apelul lui `typeof x` returnează un string cu numele tipului:
 
 ```js
 typeof undefined // "undefined"
@@ -217,29 +217,29 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanations:
+Ultimele trei linii ar putea avea nevoie de explicații adiționale:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's wrong. It is an officially recognized error in `typeof`, kept for compatibility. Of course, `null` is not an object. It is a special value with a separate type of its own. So, again, that's an error in the language.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function of the language. We'll study functions in the next chapters, and we'll see that there's no special "function" type in the language. Functions belong to the object type. But `typeof` treats them differently. Formally, it's incorrect, but very convenient in practice.
+1. `Math` este un obiect built-in (încorporat) care furnizează operații matematice. Îl vom învăța în capitolul <info:number>. Aici servește doar ca și exemplu de obiect.
+2. Rezultatul lui `typeof null` este `"object"`. Ceea ce este greșit. Este o eroare recunoscută oficial a lui `typeof`, păstrată pentru compatibilitate. Desigur, `null` nu este un obiect. Este o valoare specială cu un tip separat al său. Așadar, din nou, Aceasta este o eroare a limbajului.
+3. Rezultatul lui `typeof alert` este `"function"`, pentru că `alert` este o funcție a limbajului. Vom studia funcțiile în capitolul următor și vom vedea că nu există nici o funcție specială pe nume "function", în limbaj. Funcțiile aparțin tipului obiect. Dar `typeof` le tratează în mod diferit. Din punct de vedere formal este incorect, dar este foarte convenabil în practică.
 
 
-## Summary
+## Rezumat
 
-There are 7 basic types in JavaScript.
+Există 7 tipuri de bază în JavaScrit.
 
-- `number` for numbers of any kind: integer or floating-point.
-- `string` for strings. A string may have one or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
+- `number` pentru numere de orice gen: întregi sau reale.
+- `string` pentru string-uri. Un string poate avea unul sau mai multe caractere, nu există niciun tip separat pentru un singur caracter.
+- `boolean` pentru `true`/`false`.
+- `null` pentru valori necunoscute -- un tip de sine stătător, care are o singură valoare, `null`.
+- `undefined` pentru valori neasignate -- un tip de sine stătător care are o singură valoare, `undefined`.
+- `object` pentru structuri de date mai complexe.
+- `symbol` pentru identificatori unici.
 
-The `typeof` operator allows us to see which type is stored in the variable.
+Operatorul `typeof` ne permite să vedem ce tip este stocat în variabilă.
 
-- Two forms: `typeof x` or `typeof(x)`.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- that's an error in the language, it's not an object in fact.
+- Două forme: `typeof x` sau `typeof(x)`. 
+- Returnează un string cu numele tipului, precum `"string"`.
+- Pentru `null` returnează `"object"` -- aceasta este o eroare în limbaj, nu este un obiect, defapt.
 
-In the next chapters we'll concentrate on primitive values and once we're familiar with them, then we'll move on to objects.
+În următoarele capitole ne vom concentra pe valorile primitive și odată ce suntem familiarizați cu ele, vom trece la obiecte.
