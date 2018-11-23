@@ -16,7 +16,7 @@ null + 1 = 1 // (3)
 undefined + 1 = NaN // (4)
 ```
 
-1. The addition with a string `"" + 1` converts `1` to a string: `"" + 1 = "1"`, and then we have `"1" + 0`, the same rule is applied.
+1. Adunarea cu un string `"" + 1` convertește `1` la string: `"" + 1 = "1"`, și apoi avem `"1" + 0`, aceleași reguli sunt aplicate.
 2. Scăderea `-` (ca majoritatea operațiilor matematice) funcționeză doar cu numere, convertește un string gol `""` la `0`.
 3. `null` devine `0` după conversia numerică.
 4. `undefined` devine `NaN` după conversia numerică.

@@ -23,4 +23,4 @@ null + 1
 undefined + 1
 ```
 
-Gândește bine, scrie apoi compară cu rezultatul.
+Gândește bine, scrie, apoi compară cu rezultatul.

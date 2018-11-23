@@ -4,15 +4,15 @@
 
 De exemplu, `alert` convertește automat orice valoare la string, iar apoi o afișează. Operațiile matematice convertesc valori la numere.
 
-Există de asemenea cazuri când avem nevoie să convertim în mod explicit o valoare pentru a pune lucrurile în ordine.
+Există de asemenea cazuri în care avem nevoie să convertim în mod explicit o valoare pentru a pune lucrurile în ordine.
 
 ```smart header="Not talking about objects yet"
-În acest capitol nu discutăm deocamdată obiectele. Aici vom studia întâi primitivele. Mai târziu, după ce vom învăța obiectele, vom vedea cum funcționează conversia obiectelor, în capitolul <info:object-toprimitive>.
+În acest capitol nu discutăm deocamdată obiectele. Aici vom studia mai întâi primitivele. Mai târziu, după ce vom învăța obiectele, vom vedea cum funcționează conversia obiectelor, în capitolul <info:object-toprimitive>.
 ```
 
 ## ToString
 
-Conversia de string are loc atunci când avem nevoie de forma stringului a unei valori.
+Conversia de string are loc atunci când avem nevoie de forma string-ului unei valori.
 
 Spre exemplu, `alert(value)` face conversie pentru a afișa valoarea.
 
@@ -68,7 +68,7 @@ Regulile conversiei numerice:
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;and&nbsp;false</code> | `1` and `0` |
-| `string` | Spațiile albe de la început și de la sfârșit sunt șterse. Apoi dacă string-ul rămas este gol rezultatul este `0`. Altfel numărul este "citit" din string. O eroare va da `NaN`. |
+| `string` | Spațiile albe de la început și de la sfârșit sunt șterse. Apoi dacă string-ul rămas este gol rezultatul este `0`. Altfel numărul este "citit" din string. O eroare ar putea da `NaN`. |
 
 Exemple:
 
@@ -82,7 +82,7 @@ alert( Number(false) );       // 0
 Te rog observă că `null` și `undefined` se comportă diferit aici: `null` devine un zero, în timp ce `undefined` devine `NaN`.
 
 ````smart header="Addition '+' concatenates strings"
-Aproape toate operațiile matematice convertesc valori în numere. Cu o excepție notabilă a adunării `+`. Dacă una dintre valorile adunate este string, atunci cealaltă este de asemenea convertită la string.
+Aproape toate operațiile matematice convertesc valorile în numere. Cu o excepție notabilă a adunării `+`. Dacă una dintre valorile adunate este string, atunci cealaltă este de asemenea convertită la string.
 
 Apoi le concatenează (join):
 
@@ -127,9 +127,9 @@ alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
 
 ## Rezumat
 
-Există trei tipuri de conversie ce sunt cel mai des folosite: to string, to number și to boolean.
+Există trei tipuri de conversie care sunt cel mai des folosite: to string, to number și to boolean.
 
-**`ToString`** -- Apare când returnăm ceva, poate fi realizată cu `String(value)`. Conversia la string este de obicei evidentă pentru valorile primitive.
+**`ToString`** -- Apare atunci când returnăm ceva, poate fi realizată cu `String(value)`. Conversia la string este de obicei evidentă pentru valorile primitive.
 
 **`ToNumber`** -- Apare în operațiile matematice, poate fi realizată cu `Number(value)`.
 
@@ -140,7 +140,7 @@ Conversia urmează următoarele reguli:
 |`undefined`|`NaN`|
 |`null`|`0`|
 |<code>true&nbsp;/&nbsp;false</code> | `1 / 0` |
-| `string` | String-ul este citit ca "așa cum este", spațiile albe din ambele părți sunt ignorate. Un string gol devine `0`. O eroare va da `NaN`. |
+| `string` | String-ul este citit ca "așa cum este", spațiile albe din ambele părți sunt ignorate. Un string gol devine `0`. O eroare ar putea da `NaN`. |
 
 **`ToBoolean`** -- Apare în operațiile logice sau poate fi realizată cu `Boolean(value)`.
 
@@ -149,10 +149,10 @@ Urmează regulile:
 | Valoarea |  Devine... |
 |-------|-------------|
 |`0`, `null`, `undefined`, `NaN`, `""` |`false`|
-|orice alt valoare| `true` |
+|orice altă valoare| `true` |
 
 
-Majoritatea acestor reguli sunt ușor de înțeles și de memorat. Excepțiile remarcabile unde lumea greșește adesea sunt:
+Majoritatea acestor reguli sunt ușor de înțeles și de memorat. Excepțiile remarcabile, când lumea greșește adesea sunt:
 
 - `undefined` este `NaN` ca și un număr, nu `0`.
 - `"0"` și string-urile space-only ca `"   "` sunt adevărate ca și boolean.
