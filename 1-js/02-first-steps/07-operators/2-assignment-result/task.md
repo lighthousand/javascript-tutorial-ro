@@ -1,10 +1,10 @@
-importance: 3
+importanță: 3
 
 ---
 
-# Assignment result
+# Rezultatul asignării
 
-What are the values of `a` and `x` after the code below?
+Care sunt valorile lui `a` și `x` după codul de mai jos?
 
 ```js
 let a = 2;

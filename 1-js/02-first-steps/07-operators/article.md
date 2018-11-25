@@ -1,15 +1,15 @@
-# Operators
+# Operatori
 
-Many operators are known to us from school. They are addition `+`, a multiplication `*`, a subtraction `-` and so on.
+Mulți operatori ne sunt cunoscuți de la școală. Ei sunt adunarea `+`, înmulțirea `*`, scăderea `-` și așa mai departe.
 
-In this chapter we concentrate on aspects that are not covered by school arithmetic.
+În acest capitol ne concentrăm pe aspecte ce nu sunt acoperite de aritmetica din școală.
 
-## Terms: "unary", "binary", "operand"
+## Termenii: "unar", "binar", "operand"
 
-Before we move on, let's grasp the common terminology.
+Înainte de a merge mai departe să înțelegem terminologia comună.
 
-- *An operand* -- is what operators are applied to. For instance in multiplication `5 * 2` there are two operands: the left operand is `5`, and the right operand is `2`. Sometimes people say "arguments" instead of "operands".
-- An operator is *unary* if it has a single operand. For example, the unary negation `-` reverses the sign of the number:
+- *Un operand* -- este ceea ce este aplicat operatorilor. De exemplu în înmulțirea `5 * 2` sunt doi operanzi: operandul stâng este `5`, iar cel drept este `2`. Câteodată lumea spune "argumente" în loc de "operanzi".
+- Un operator este *unar* dacă are un singur operand. De exemplu, negația unară `-` inversează semnul numărului:
 
     ```js run
     let x = 1;
@@ -19,62 +19,62 @@ Before we move on, let's grasp the common terminology.
     */!*
     alert( x ); // -1, unary negation was applied
     ```
-- An operator is *binary* if it has two operands. The same minus exists in the binary form as well:
+- Un operator este *binar* dacă are doi operanzi. Același minus există în format binar, de asemenea:
 
     ```js run no-beautify
     let x = 1, y = 3;
     alert( y - x ); // 2, binary minus subtracts values
     ```
 
-    Formally, we're talking about two different operators here: the unary negation (single operand, reverses the sign) and the binary subtraction (two operands, subtracts).
+    Formal, vorbim aici de doi operatori diferiți: negția unară (un singur operator, inversează semnul) și scăderea binară (doi operanzi, scădere).
 
-## Strings concatenation, binary +
+## Concatenarea string-urilor, + binar
 
-Now let's see special features of JavaScript operators that are beyond school arithmetics.
+Acum, să vedem o caracteristică specială a operatorilor din JavaScript care sunt peste aritmetica din școală.
 
-Usually the plus operator `+` sums numbers.
+De obicei operatorul plus `+` adună două numere.
 
-But if the binary `+` is applied to strings, it merges (concatenates) them:
+Dar dacă `+` este aplicat string-urilor, acesta le îmbină (concatenează):
 
 ```js
 let s = "my" + "string";
 alert(s); // mystring
 ```
 
-Note that if any of the operands is a string, then the other one is converted to a string too.
+Observă că dacă oricare dintre operanzi este string, atunci celălalt este convertit de asemenea la un string.
 
-For example:
+Spre exemplu:
 
 ```js run
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 ```
 
-See, it doesn't matter whether the first operand is a string or the second one. The rule is simple: if either operand is a string, then convert the other one into a string as well.
+Vezi, nu contează dacă primul operand sau al doilea operand este un string. Regula este simplă: dacă oricare dintre operanzi este string, atunci convertește-l pe celălalt într-un string.
 
-However, note that operations run from left to right. If there are two numbers followed by a string, the numbers will be added before being converted to a string:
+Totuși, observă că operațiile execută de la stânga la dreapta. Dacă există două numere urmate de un string, numerele vor fi adunate înainte de a fi convertite la string:
 
 
 ```js run
 alert(2 + 2 + '1' ); // "41" and not "221"
 ```
 
-String concatenation and conversion is a special feature of the binary plus `+`. Other arithmetic operators work only with numbers. They always convert their operands to numbers.
+Concatenarea și conversia de string-uri este o caracteristică specială a binarului plus `+`. Alți operatori aritmetici lucrează doar cu numerele. Ei întotdeauna își convertesc operanzii la numere.
 
-For instance, subtraction and division:
+De exemplu, scăderea și împărțirea:
 
 ```js run
 alert( 2 - '1' ); // 1
 alert( '6' / '2' ); // 3
 ```
 
-## Numeric conversion, unary +
+## Conversia numerică, + unar
 
-The plus `+` exists in two forms. The binary form that we used above and the unary form.
+Plusul `+` există în două forme. Forma binară pe care am folosit-o mai sus și forma unară.
 
-The unary plus or, in other words, the plus operator `+` applied to a single value, doesn't do anything with numbers, but if the operand is not a number, then it is converted into it.
+Plusul unar sau, cu alte cuvinte, operatorul plus `+` aplicat unei singure valori, nu face nimic cu numerele, dar dacă operandul nu este un număr, atunci este convertit într-unul.
 
-For example:
+De exemplu:
 
 ```js run
 // No effect on numbers

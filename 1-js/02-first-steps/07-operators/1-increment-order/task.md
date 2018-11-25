@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# The postfix and prefix forms
+# Formele postfixată și prefixată
 
-What are the final values of all variables `a`, `b`, `c` and `d` after the code below?
+Care sunt valorile finale ale variabilelor `a`, `b`, `c` și `d` după codul de mai jos?
 
 ```js
 let a = 1, b = 1;
