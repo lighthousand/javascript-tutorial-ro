@@ -91,13 +91,13 @@ alert( +"" );   // 0
 */!*
 ```
 
-It actually does the same as `Number(...)`, but is shorter.
+Face defapt același lucru ca și `Number(...)`, dar este mai scurt.
 
-A need to convert strings to numbers arises very often. For example, if we are getting values from HTML form fields, then they are usually strings.
+Nevoia de a converti string-uri în numere se ivește deseori. Spre exemplu, dacă primim valori din câmpurile formularelor din HTML, atunci ele sunt string-uri obișnuite.
 
-What if we want to sum them?
+Ce se întâmplă dacă încercăm să le adunăm?
 
-The binary plus would add them as strings:
+Plus-ul binar le-ar aduna ca și string-uri:
 
 ```js run
 let apples = "2";
@@ -106,7 +106,7 @@ let oranges = "3";
 alert( apples + oranges ); // "23", the binary plus concatenates strings
 ```
 
-If we want to treat them as numbers, then we can convert and then sum:
+Dacă vrem să le tratăm ca și numere, atunci le putem converti și apoi le adunăm:
 
 ```js run
 let apples = "2";
@@ -121,42 +121,42 @@ alert( +apples + +oranges ); // 5
 // alert( Number(apples) + Number(oranges) ); // 5
 ```
 
-From a mathematician's standpoint the abundance of pluses may seem strange. But from a programmer's standpoint, there's nothing special: unary pluses are applied first, they convert strings to numbers, and then the binary plus sums them up.
+Din punctul de vedere al unui matematician abundența plus-urilor ar putea părea ciudată. Dar din punctul de vedere al unui programator, nu este nimic special: plus-urile unare sunt aplicate primele, ele convertesc string-urile la numere, iar apoi plus-ul binar le adună.
 
-Why are unary pluses applied to values before the binary one? As we're going to see, that's because of their *higher precedence*.
+De ce sunt aplicate plus-urile unare, valorilor, înainte de cele binare? După cum vom vedea, acest lucru se întâmplă din cauza *precedenței mai mari*.
 
-## Operators precedence
+## Precedența operatorilor
 
-If an expression has more than one operator, the execution order is defined by their *precedence*, or, in other words, there's an implicit priority order among the operators.
+Dacă o expresie are mai mult de un operator ordinea execuției este definită de *precedența* lor, sau, cu alte cuvinte, exista o prioritate a ordinii implicită printre operatori.
 
-From school we all know that the multiplication in the expression `1 + 2 * 2` should be calculated before the addition. That's exactly the precedence thing. The multiplication is said to have *a higher precedence* than the addition.
+Din școală știm cu toții că înmulțirea din expresia `1 + 2 * 2` ar trebui calculată înaintea sumei. Asta este exact precedența. Se spune că înmulțirea are *o procedență mai mare* decât suma.
 
-Parentheses override any precedence, so if we're not satisfied with the order, we can use them, like: `(1 + 2) * 2`.
+Parantezele suprascriu orice precedență, așa că dacă nu suntem satisfăcuți cu ordinea le putem folosi, ca aici: `(1 + 2) * 2`.
 
-There are many operators in JavaScript. Every operator has a corresponding precedence number. The one with the bigger number executes first. If the precedence is the same, the execution order is from left to right.
+Există mulți operatori în JavaScript. Fiecare operator are un număr de precedență, ce-i corespunde. Cel cu numărul mai mare execută primul. Dacă precedența este aceeași, ordinea execuției este de la stânga la dreapta.
 
-An extract from the [precedence table](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (you don't need to remember this, but note that unary operators are higher than corresponding binary ones):
+Un extract din [tabelul de precedență](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (nu trebuie să ții minte asta, dar observă că operatorii unari sunt mai mari decât corespondenții lor binari):
 
-| Precedence | Name | Sign |
+| Precedență | Nume | Semn |
 |------------|------|------|
 | ... | ... | ... |
-| 16 | unary plus | `+` |
-| 16 | unary negation | `-` |
-| 14 | multiplication | `*` |
-| 14 | division | `/` |
-| 13 | addition | `+` |
-| 13 | subtraction | `-` |
+| 16 | plus unar | `+` |
+| 16 | negație unară | `-` |
+| 14 | înmulțire | `*` |
+| 14 | împărțire | `/` |
+| 13 | adunare | `+` |
+| 13 | scădere | `-` |
 | ... | ... | ... |
-| 3 | assignment | `=` |
+| 3 | asignare | `=` |
 | ... | ... | ... |
 
-As we can see, the "unary plus" has a priority of `16`, which is higher than `13` for the "addition" (binary plus). That's why in the expression `"+apples + +oranges"` unary pluses work first, and then the addition.
+După cum vedem, "plus-ul unar" are o prioritate de `16`, care este mai mare decât `13` pentru "sumă" (plus binar). De aceea în expresia `"+apples + +oranges"` plus-urile unare execută primele, iar apoi suma.
 
-## Assignment
+## Atribuire
 
-Let's note that an assignment `=` is also an operator. It is listed in the precedence table with the very low priority of `3`.
+Să observăm că o asignare `=` este de asemenea un operator. Este listat în tabelul de precedență cu prioritatea foarte mică de `3`.
 
-That's why when we assign a variable, like `x = 2 * 2 + 1`, then the calculations are done first, and afterwards the `=` is evaluated, storing the result in `x`.
+De aceea atunci când asignăm o variabile, ca `x = 2 * 2 + 1`, calculele sunt realizate primele, și apoi `=` este evaluat, stocând rezultatul în `x`.
 
 ```js
 let x = 2 * 2 + 1;
@@ -164,7 +164,7 @@ let x = 2 * 2 + 1;
 alert( x ); // 5
 ```
 
-It is possible to chain assignments:
+Este posibil să înlănțuim asignările:
 
 ```js run
 let a, b, c;
@@ -178,14 +178,14 @@ alert( b ); // 4
 alert( c ); // 4
 ```
 
-Chained assignments evaluate from right to left. First the rightmost expression `2 + 2` is evaluated then assigned to the variables on the left: `c`, `b` and `a`. At the end, all variables share a single value.
+Asignările înlănțuite sunt evaluate de la dreapta la stânga. În primul rând, expresia cea mai din dreapta `2 + 2` este evaluată și apoi asignată variabilelor din stânga: `c`, `b` și `a`. La sfârșit, toate variabilele împărtășesc o singurp valoare.
 
 ````smart header="The assignment operator `\"=\"` returns a value"
-An operator always returns a value. That's obvious for most of them like an addition `+` or a multiplication `*`. But the assignment operator follows that rule too.
+Un operator returnează întotdeauna o valoare. Asta este evident pentru majoritatea operatorilor ca adunarea `+` sau înmulțirea `*`. Dar operatorul de asignare folosește aceeași regulă.
 
-The call `x = value` writes the `value` into `x` *and then returns it*.
+Apelul `x = value` scrie valoarea `value` în `x` *și apoi o returnează*.
 
-Here's the demo that uses an assignment as part of a more complex expression:
+Aici este demo-ul care folosește o asignare ca și parte a unei expresii mai complexe:
 
 ```js run
 let a = 1;
@@ -199,18 +199,18 @@ alert( a ); // 3
 alert( c ); // 0
 ```
 
-In the example above, the result of `(a = b + 1)` is the value which is assigned to `a` (that is `3`). It is then used to subtract from `3`.
+În exemplul de mai sus, rezultatul lui `(a = b + 1)` este valoarea care este atribuită lui `a` (care este `3`). Este folosit apoi pentru a scădea din `3`.
 
-Funny code, isn't it? We should understand how it works, because sometimes we can see it in 3rd-party libraries, but shouldn't write anything like that ourselves. Such tricks definitely don't make the code clearer and readable.
+Amuzant cod, nu ? Ar trebui să înțelegem cum funcționează, pentru că uneori îl putem vedea în biblioteci 3rd-party, dar nu ar trebui să scriem așa ceva noi înșine. Astfel de trucuri cu siguranță nu fac codul mai curat și mai lizibil.
 ````
 
-## Remainder %
+## Restul %
 
-The remainder operator `%` despite its look does not have a relation to percents.
+Operatorul rest `%` în ciuda aparenței sale nu are o relație cu procentele.
 
-The result of `a % b` is the remainder of the integer division of `a` by `b`.
+Rezultatul lui `a % b` este restul împărțirii întregi a lui `a` la `b`.
 
-For instance:
+Spre exemplu:
 
 ```js run
 alert( 5 % 2 ); // 1 is a remainder of 5 divided by 2
@@ -218,13 +218,13 @@ alert( 8 % 3 ); // 2 is a remainder of 8 divided by 3
 alert( 6 % 3 ); // 0 is a remainder of 6 divided by 3
 ```
 
-## Exponentiation **
+## Exponențierea **
 
-The exponentiation operator `**` is a recent addition to the language.
+Operatorul de exponențiere `**` este o adiție recentă limbajului.
 
-For a natural number `b`, the result of `a ** b` is `a` multiplied by itself `b` times.
+Pentru un număr natural `b` rezultatul lui `a ** b` este `a` înmulțit cu el însuși de `b` ori.
 
-For instance:
+De exemplu:
 
 ```js run
 alert( 2 ** 2 ); // 4  (2 * 2)
@@ -232,29 +232,29 @@ alert( 2 ** 3 ); // 8  (2 * 2 * 2)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2)
 ```
 
-The operator works for non-integer numbers of `a` and `b` as well, for instance:
+Operatorul funcționează pentru numere non-întregi a lui `a` și `b` de asemenea, de exemplu:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root, that's maths)
 alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
 ```
 
-## Increment/decrement
+## Incrementare/decrementare
 
 <!-- Can't use -- in title, because built-in parse turns it into – -->
 
-Increasing or decreasing a number by one is among the most common numerical operations.
+Adunând sau scăzând 1 dintr-un număr este una dintre cele mai comune operații numerice.
 
-So, there are special operators for that:
+Așadar, există operatori speciali pentru acest lucru:
 
-- **Increment** `++` increases a variable by 1:
+- **Incrementarea** `++` crește o variabile cu 1:
 
     ```js run no-beautify
     let counter = 2;
     counter++;      // works the same as counter = counter + 1, but is shorter
     alert( counter ); // 3
     ```
-- **Decrement** `--` decreases a variable by 1:
+- **Decrementarea** `--` descrește o variabilă cu 1:
 
     ```js run no-beautify
     let counter = 2;
@@ -263,21 +263,21 @@ So, there are special operators for that:
     ```
 
 ```warn
-Increment/decrement can be applied only to a variable. An attempt to use it on a value like `5++` will give an error.
+Incrementarea/decrementarea poate fi aplicată doar variabilelor. O încercare de a o folosi pe o valoare ca `5++` va da eroare.
 ```
 
-Operators `++` and `--` can be placed both after and before the variable.
+Operatorii `++` și `--` pot fi așezați amândoi înainte sau după variabilă.
 
-- When the operator goes after the variable, it is called a "postfix form": `counter++`.
-- The "prefix form" is when the operator stands before the variable: `++counter`.
+- Când operatorul este pus după variabilă, se numește "formă postfixată": `counter++`. 
+- "Forma prefixată" este atunci când operatorul stă înaintea variabilei: `++counter`.
 
-Both of these records do the same: increase `counter` by `1`.
+Ambele fac același lucru: cresc variabila `counter` cu `1`.  
 
-Is there any difference? Yes, but we can only see it if we use the returned value of `++/--`.
+Există vreo diferență? Da, dar o putem vedea doar dacă folosim valoare returnată de `++/--`.
 
-Let's clarify. As we know, all operators return a value. Increment/decrement is not an exception here. The prefix form returns the new value, while the postfix form returns the old value (prior to increment/decrement).
+Să clarificăm. După cum știm, toți operatorii returnează o valoare. Incrementarea/decrementarea nu este o excepție. Forma prefixată returnează valoarea nouă, în timp ce forma postfixată returnează valoarea veche (precedentă incrementării/decrementării).
 
-To see the difference, here's the example:
+Pentru a vedea diferența, aici este exemplul:
 
 ```js run
 let counter = 1;
@@ -286,9 +286,9 @@ let a = ++counter; // (*)
 alert(a); // *!*2*/!*
 ```
 
-Here in the line `(*)` the prefix call `++counter` increments `counter` and returns the new value that is `2`. So the `alert` shows `2`.
+Aici la linia `(*)` apelul prefixat `++counter` incrementează `counter` și returnează noua valoare care este `2`. Așa că `alert` afișează `2`.
 
-Now let's use the postfix form:
+Acum, să folosim forma postfixată:
 
 ```js run
 let counter = 1;
