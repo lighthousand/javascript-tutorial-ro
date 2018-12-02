@@ -297,11 +297,11 @@ let a = counter++; // (*) changed ++counter to counter++
 alert(a); // *!*1*/!*
 ```
 
-In the line `(*)` the *postfix* form `counter++` also increments `counter`, but returns the *old* value (prior to increment). So the `alert` shows `1`.
+În linia `(*)` forma *postfixată* `counter++` incrementează de asemenea pe `counter`, dar returnează valoarea *veche* (înainte de incrementare). Așadar `alert` afișează `1`.
 
-To summarize:
+Pentru a rezuma:
 
-- If the result of increment/decrement is not used, then there is no difference in which form to use:
+- Dacă rezultatul incrementării/decrementării nu este folosit, atunci nu este nici o diferență cu privire la ce formă să fie folosită:
 
     ```js run
     let counter = 0;
@@ -309,13 +309,13 @@ To summarize:
     ++counter;
     alert( counter ); // 2, the lines above did the same
     ```
-- If we'd like to increase the value *and* use the result of the operator right now, then we need the prefix form:
+- Dacă am vrea să mărim valoarea *și* să folosim rezultatul operatorului chiar acum, atunci avem nevoie de forma prefixată:
 
     ```js run
     let counter = 0;
     alert( ++counter ); // 1
     ```
-- If we'd like to increment, but use the previous value, then we need the postfix form:
+- Dacă am vrea să incrementăm, dar să folosim valoarea precedentă, atunci avem nevoie de forma postfixată:
 
     ```js run
     let counter = 0;
@@ -323,27 +323,27 @@ To summarize:
     ```
 
 ````smart header="Increment/decrement among other operators"
-Operators `++/--` can be used inside an expression as well. Their precedence is higher than most other arithmetical operations.
+Operatorii `++/--` pot fi folosiți în interiorul unei expresii de asemenea. Precedența lor este mai mare decât cea a majorității operatorilor aritmetici.
 
-For instance:
+De exemplu:
 
 ```js run
 let counter = 1;
 alert( 2 * ++counter ); // 4
 ```
 
-Compare with:
+Compară cu:
 
 ```js run
 let counter = 1;
 alert( 2 * counter++ ); // 2, because counter++ returns the "old" value
 ```
 
-Though technically allowable, such notation usually makes the code less readable. One line does multiple things -- not good.
+Deși tehnic admisibil, asemenea notație de obicei face codul mai puțin citibil. O singură linie face lucruri multiple -- nu e bine.
 
-While reading the code, a fast "vertical" eye-scan can easily miss such `counter++`, and it won't be obvious that the variable increases.
+Când citim codul, o scanare vizuală "verticală" poate cu ușurință să rateze un asemenea `counter++` și nu va fi evident că variabila se mărește.
 
-The "one line -- one action" style is advised:
+Este sfătuit să se folosească stilul "o linie -- o acțiune":
 
 ```js run
 let counter = 1;
@@ -352,13 +352,13 @@ counter++;
 ```
 ````
 
-## Bitwise operators
+## Operatorii pe biți
 
-Bitwise operators treat arguments as 32-bit integer numbers and work on the level of their binary representation.
+Operatorii pe biți tratează argumentele ca și numere întregi pe 32 de biți și lucrează  la nivelul reprezentării lor binare.
 
-These operators are not JavaScript-specific. They are supported in most programming languages.
+Acești operatori nu sunt specifici JavaScript-ului. Ei sunt suportați în majoritatea limbajelor de programare.
 
-The list of operators:
+Lista operatorilor:
 
 - AND ( `&` )
 - OR ( `|` )
@@ -367,6 +367,7 @@ The list of operators:
 - LEFT SHIFT ( `<<` )
 - RIGHT SHIFT ( `>>` )
 - ZERO-FILL RIGHT SHIFT ( `>>>` )
+
 
 These operators are used very rarely. To understand them, we should delve into low-level number representation, and it would not be optimal to do that right now. Especially because we won't need them any time soon. If you're curious, you can read the [Bitwise Operators](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) article in MDN. It would be more practical to do that when a real need arises.
 
