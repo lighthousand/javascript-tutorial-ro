@@ -369,13 +369,13 @@ Lista operatorilor:
 - ZERO-FILL RIGHT SHIFT ( `>>>` )
 
 
-These operators are used very rarely. To understand them, we should delve into low-level number representation, and it would not be optimal to do that right now. Especially because we won't need them any time soon. If you're curious, you can read the [Bitwise Operators](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators) article in MDN. It would be more practical to do that when a real need arises.
+Acești operatori sunt folosiți foarte rar. Pentru a-i înțelege ar trebui să săpăm în reprezentarea numerelor low-level, dar nu ar fi optim să facem asta acum. În special pentru că nu vom avea nevoie de ei foarte curând. Dacă ești curios poți citi articolul din MDN despre [Operatorii pe biți](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators). Ar fi mult mai practic să facem acest lucru când se ivește nevoia.
 
-## Modify-in-place
+## Modificarea în-loc
 
-We often need to apply an operator to a variable and store the new result in it.
+Deseori trebuie să aplicăm un operator unei variabile și să stocăm noul rezultat în aceasta.
 
-For example:
+Spre exemplu:
 
 ```js
 let n = 2;
@@ -383,7 +383,7 @@ n = n + 5;
 n = n * 2;
 ```
 
-This notation can be shortened using operators `+=` and `*=`:
+Această notație poate fi scurtată folosind operatorii `+=` și `*=`:
 
 ```js run
 let n = 2;
@@ -393,9 +393,9 @@ n *= 2; // now n = 14 (same as n = n * 2)
 alert( n ); // 14
 ```
 
-Short "modify-and-assign" operators exist for all arithmetical and bitwise operators: `/=`, `-=` etc.
+Operatorii scurți "modifică-și-asignează" există pentru toți operatorii aritmetici și pe biți: `/=`, `-=` etc.
 
-Such operators have the same precedence as a normal assignment, so they run after most other calculations:
+Asemenea operatori au aceeași precedență precum o asignare normală, așadar ei rulează după majoritatea altor calcule:
 
 ```js run
 let n = 2;
@@ -405,13 +405,13 @@ n *= 3 + 5;
 alert( n ); // 16  (right part evaluated first, same as n *= 8)
 ```
 
-## Comma
+## Virgula
 
-The comma operator `,` is one of most rare and unusual operators. Sometimes it's used to write shorter code, so we need to know it in order to understand what's going on.
+Operatorul virgulă `,` este unul dintre cei mai rari și mai neobișnuiți operatori. Câteodată este folosit pentru a scrie cod mai scurt, așadar trebuie să îl știm pentru a înțelege ce se petrece.
 
-The comma operator allows us to evaluate several expressions, dividing them with a comma `,`. Each of them is evaluated, but the result of only the last one is returned.
+Operatorul virgulă permite ne permite să evaluăm câteva expresii, să le împărțim cu o virgulă `,`. Fiecare dintre ele este evaluată, dar doar rezultatul ultimei este returnată.
 
-For example:
+De exemplu:
 
 ```js run
 *!*
@@ -421,19 +421,19 @@ let a = (1 + 2, 3 + 4);
 alert( a ); // 7 (the result of 3 + 4)
 ```
 
-Here, the first expression `1 + 2` is evaluated, and its result is thrown away, then `3 + 4` is evaluated and returned as the result.
+Aici, prima expresie `1 + 2` este evaluată și rezultatul ei este aruncat, apoi `3 + 4` este evaluat și returnat ca și rezultat.
 
 ```smart header="Comma has a very low precedence"
-Please note that the comma operator has very low precedence, lower than `=`, so parentheses are important in the example above.
+Te rog observă că operatorul virgulp are precedență foarte mică, mai mică chiar decât `=`, așadar parantezele sunt importante în exemplul de mai sus.
 
-Without them: `a = 1 + 2, 3 + 4` evaluates `+` first, summing the numbers into `a = 3, 7`, then the assignment operator `=` assigns    `a = 3`, and then the number after the comma `7` is not processed anyhow, so it's ignored.
+Fără ele: `a = 1 + 2, 3 + 4` evaluează `+` prima dată, adunând numerele în `a = 3, 7`, apoi operatorul de asignare `=` atribuie    `a = 3`, și apoi numărul de după virgulă `7` nu este nicicum procesat, așa că este ignorat.
 ```
 
-Why do we need such an operator which throws away everything except the last part?
+De ce avem nevoie de un astfel de operator care aruncă tot cu excepția ultimei părți?
 
-Sometimes people use it in more complex constructs to put several actions in one line.
+Câteodată lumea îl folosește în construcții mai complexe pentru a pune mai multe acțiuni într-o singură linie.
 
-For example:
+De exemplu:
 
 ```js
 // three operations in one line
@@ -442,4 +442,4 @@ for (*!*a = 1, b = 3, c = a * b*/!*; a < 10; a++) {
 }
 ```
 
-Such tricks are used in many JavaScript frameworks, that's why we mention them. But usually they don't improve the code readability, so we should think well before writing like that.
+Astfel de trucuri sunt folosite în multe framework-uri JavaScript, de aceea le menționăm aici. Dar în mod normal nu îmbunătățesc lizibilitatea, așa că ar trebui să ne gândim bine înainte de a scrie astfel.
