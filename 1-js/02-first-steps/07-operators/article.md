@@ -26,7 +26,7 @@ Mulți operatori ne sunt cunoscuți de la școală. Ei sunt adunarea `+`, înmul
     alert( y - x ); // 2, binary minus subtracts values
     ```
 
-    Formal, vorbim aici de doi operatori diferiți: negția unară (un singur operator, inversează semnul) și scăderea binară (doi operanzi, scădere).
+    Formal, vorbim aici de doi operatori diferiți: negația unară (un singur operator, inversează semnul) și scăderea binară (doi operanzi, scădere).
 
 ## Concatenarea string-urilor, + binar
 
@@ -52,14 +52,14 @@ alert( 2 + '1' ); // "21"
 
 Vezi, nu contează dacă primul operand sau al doilea operand este un string. Regula este simplă: dacă oricare dintre operanzi este string, atunci convertește-l pe celălalt într-un string.
 
-Totuși, observă că operațiile execută de la stânga la dreapta. Dacă există două numere urmate de un string, numerele vor fi adunate înainte de a fi convertite la string:
+Totuși, observă că operațiile sunt executate de la stânga la dreapta. Dacă există două numere urmate de un string, numerele vor fi adunate înainte de a fi convertite la string:
 
 
 ```js run
 alert(2 + 2 + '1' ); // "41" and not "221"
 ```
 
-Concatenarea și conversia de string-uri este o caracteristică specială a binarului plus `+`. Alți operatori aritmetici lucrează doar cu numerele. Ei întotdeauna își convertesc operanzii la numere.
+Concatenarea și conversia de string-uri este o caracteristică specială a plusului binar `+`. Alți operatori aritmetici lucrează doar cu numerele. Ei întotdeauna își convertesc operanzii la numere.
 
 De exemplu, scăderea și împărțirea:
 
@@ -72,7 +72,7 @@ alert( '6' / '2' ); // 3
 
 Plusul `+` există în două forme. Forma binară pe care am folosit-o mai sus și forma unară.
 
-Plusul unar sau, cu alte cuvinte, operatorul plus `+` aplicat unei singure valori, nu face nimic cu numerele, dar dacă operandul nu este un număr, atunci este convertit într-unul.
+Plusul unar sau, cu alte cuvinte, operatorul plus `+`, aplicat unei singure valori, nu face nimic cu numerele, dar dacă operandul nu este un număr atunci este convertit într-unul.
 
 De exemplu:
 
@@ -93,7 +93,7 @@ alert( +"" );   // 0
 
 Face defapt același lucru ca și `Number(...)`, dar este mai scurt.
 
-Nevoia de a converti string-uri în numere se ivește deseori. Spre exemplu, dacă primim valori din câmpurile formularelor din HTML, atunci ele sunt string-uri obișnuite.
+Nevoia de a converti string-uri în numere se ivește adesea. Spre exemplu, dacă primim valori din câmpurile formularelor din HTML, atunci ele sunt string-uri obișnuite.
 
 Ce se întâmplă dacă încercăm să le adunăm?
 
@@ -127,13 +127,13 @@ De ce sunt aplicate plus-urile unare, valorilor, înainte de cele binare? După 
 
 ## Precedența operatorilor
 
-Dacă o expresie are mai mult de un operator ordinea execuției este definită de *precedența* lor, sau, cu alte cuvinte, exista o prioritate a ordinii implicită printre operatori.
+Dacă o expresie are mai mult de un operator ordinea execuției este definită de *precedența* lor sau, cu alte cuvinte, există o prioritate a ordinii implicită printre operatori.
 
 Din școală știm cu toții că înmulțirea din expresia `1 + 2 * 2` ar trebui calculată înaintea sumei. Asta este exact precedența. Se spune că înmulțirea are *o procedență mai mare* decât suma.
 
 Parantezele suprascriu orice precedență, așa că dacă nu suntem satisfăcuți cu ordinea le putem folosi, ca aici: `(1 + 2) * 2`.
 
-Există mulți operatori în JavaScript. Fiecare operator are un număr de precedență, ce-i corespunde. Cel cu numărul mai mare execută primul. Dacă precedența este aceeași, ordinea execuției este de la stânga la dreapta.
+Există mulți operatori în JavaScript. Fiecare operator are un număr de precedență ce-i corespunde. Cel cu numărul mai mare execută primul. Dacă precedența este aceeași ordinea execuției este de la stânga la dreapta.
 
 Un extract din [tabelul de precedență](https://developer.mozilla.org/en/JavaScript/Reference/operators/operator_precedence) (nu trebuie să ții minte asta, dar observă că operatorii unari sunt mai mari decât corespondenții lor binari):
 
@@ -156,7 +156,7 @@ După cum vedem, "plus-ul unar" are o prioritate de `16`, care este mai mare dec
 
 Să observăm că o asignare `=` este de asemenea un operator. Este listat în tabelul de precedență cu prioritatea foarte mică de `3`.
 
-De aceea atunci când asignăm o variabile, ca `x = 2 * 2 + 1`, calculele sunt realizate primele, și apoi `=` este evaluat, stocând rezultatul în `x`.
+De aceea atunci când asignăm o variabilă, ca `x = 2 * 2 + 1`, calculele sunt realizate primele, și apoi `=` este evaluat, stocând rezultatul în `x`.
 
 ```js
 let x = 2 * 2 + 1;
@@ -178,7 +178,7 @@ alert( b ); // 4
 alert( c ); // 4
 ```
 
-Asignările înlănțuite sunt evaluate de la dreapta la stânga. În primul rând, expresia cea mai din dreapta `2 + 2` este evaluată și apoi asignată variabilelor din stânga: `c`, `b` și `a`. La sfârșit, toate variabilele împărtășesc o singurp valoare.
+Asignările înlănțuite sunt evaluate de la dreapta la stânga. În primul rând, expresia cea mai din dreapta `2 + 2` este evaluată și apoi asignată variabilelor din stânga: `c`, `b` și `a`. La sfârșit, toate variabilele împărtășesc o singură valoare.
 
 ````smart header="The assignment operator `\"=\"` returns a value"
 Un operator returnează întotdeauna o valoare. Asta este evident pentru majoritatea operatorilor ca adunarea `+` sau înmulțirea `*`. Dar operatorul de asignare folosește aceeași regulă.
@@ -220,7 +220,7 @@ alert( 6 % 3 ); // 0 is a remainder of 6 divided by 3
 
 ## Exponențierea **
 
-Operatorul de exponențiere `**` este o adiție recentă limbajului.
+Operatorul de exponențiere `**` este o adiție recentă a limbajului.
 
 Pentru un număr natural `b` rezultatul lui `a ** b` este `a` înmulțit cu el însuși de `b` ori.
 
@@ -232,7 +232,7 @@ alert( 2 ** 3 ); // 8  (2 * 2 * 2)
 alert( 2 ** 4 ); // 16 (2 * 2 * 2 * 2)
 ```
 
-Operatorul funcționează pentru numere non-întregi a lui `a` și `b` de asemenea, de exemplu:
+Operatorul funcționează pentru numere neîntregi a lui `a` și `b` de asemenea, de exemplu:
 
 ```js run
 alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root, that's maths)
@@ -247,7 +247,7 @@ Adunând sau scăzând 1 dintr-un număr este una dintre cele mai comune operaț
 
 Așadar, există operatori speciali pentru acest lucru:
 
-- **Incrementarea** `++` crește o variabile cu 1:
+- **Incrementarea** `++` crește o variabilă cu 1:
 
     ```js run no-beautify
     let counter = 2;
@@ -268,7 +268,7 @@ Incrementarea/decrementarea poate fi aplicată doar variabilelor. O încercare d
 
 Operatorii `++` și `--` pot fi așezați amândoi înainte sau după variabilă.
 
-- Când operatorul este pus după variabilă, se numește "formă postfixată": `counter++`. 
+- Când operatorul este pus după variabilă, se numește "formă postfixată": `counter++`.
 - "Forma prefixată" este atunci când operatorul stă înaintea variabilei: `++counter`.
 
 Ambele fac același lucru: cresc variabila `counter` cu `1`.  
@@ -409,7 +409,7 @@ alert( n ); // 16  (right part evaluated first, same as n *= 8)
 
 Operatorul virgulă `,` este unul dintre cei mai rari și mai neobișnuiți operatori. Câteodată este folosit pentru a scrie cod mai scurt, așadar trebuie să îl știm pentru a înțelege ce se petrece.
 
-Operatorul virgulă permite ne permite să evaluăm câteva expresii, să le împărțim cu o virgulă `,`. Fiecare dintre ele este evaluată, dar doar rezultatul ultimei este returnată.
+Operatorul virgulă ne permite să evaluăm câteva expresii, să le împărțim cu o virgulă `,`. Fiecare dintre ele este evaluată, dar doar rezultatul ultimei este returnat.
 
 De exemplu:
 
@@ -424,7 +424,7 @@ alert( a ); // 7 (the result of 3 + 4)
 Aici, prima expresie `1 + 2` este evaluată și rezultatul ei este aruncat, apoi `3 + 4` este evaluat și returnat ca și rezultat.
 
 ```smart header="Comma has a very low precedence"
-Te rog observă că operatorul virgulp are precedență foarte mică, mai mică chiar decât `=`, așadar parantezele sunt importante în exemplul de mai sus.
+Te rog observă că operatorul virgulă are precedență foarte mică, mai mică chiar decât `=`, așadar parantezele sunt importante în exemplul de mai sus.
 
 Fără ele: `a = 1 + 2, 3 + 4` evaluează `+` prima dată, adunând numerele în `a = 3, 7`, apoi operatorul de asignare `=` atribuie    `a = 3`, și apoi numărul de după virgulă `7` nu este nicicum procesat, așa că este ignorat.
 ```
