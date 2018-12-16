@@ -1,11 +1,11 @@
-JavaScript-code:
+Codul JavaScript:
 
 ```js demo run
 let name = prompt("What is your name?", "");
 alert(name);
 ```
 
-The full page:
+Pagina întreagă:
 
 ```html
 <!DOCTYPE html>

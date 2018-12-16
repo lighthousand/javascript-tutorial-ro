@@ -1,9 +1,9 @@
-importance: 4
+importanță: 4
 
 ---
 
-# A simple page
+# O pagină simplă
 
-Create a web-page that asks for a name and outputs it.
+Creează o pagină web care cere un nume și îl afișează.
 
 [demo]

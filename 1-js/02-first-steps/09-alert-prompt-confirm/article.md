@@ -1,48 +1,48 @@
-# Interaction: alert, prompt, confirm
+# Interacțiune: alert, prompt, confirm
 
-This part of the tutorial aims to cover JavaScript "as is", without environment-specific tweaks.
+Această parte a tutorialului țintește să acopere JavaScript-ul "așa cum este", fără trucurile specifice mediului.
 
-But still we use a browser as the demo environment. So we should know at least a few user-interface functions. In this chapter we'll get familiar with the browser functions `alert`, `prompt` and `confirm`.
+Dar totuși folosim browser-ul ca și mediu de demo. Așadar ar trebui să știm câteva funcții de interfață. În acest capitol ne vom familiariza cu funcțiile browser-ului `alert`, `prompt` and `confirm`.
 
 ## alert
 
-Syntax:
+Sintaxă:
 
 ```js
 alert(message);
 ```
 
-This shows a message and pauses the script execution until the user presses "OK".
+Acest cod afișează un mesaj și pauzează script-ul până când user-ul apasă "OK".
 
-For example:
+De exemplu:
 
 ```js run
 alert("Hello");
 ```
 
-The mini-window with the message is called a *modal window*. The word "modal" means that the visitor can't interact with the rest of the page, press other buttons etc, until they have dealt with the window. In this case -- until they press "OK".
+Mini fereastra cu mesajul este denumită *fereastră modal*. Cuvântul "modal" semnifică faptul că vizitatorul nu poate interacționa cu restul paginii, să apese alt buton etc, până ce nu s-a ocupat de pagină. În acest caz -- până când acesta apasă "OK".
 
 ## prompt
 
-Function `prompt` accepts two arguments:
+Funcția `prompt` acceptă două argumente:
 
 ```js no-beautify
 result = prompt(title[, default]);
 ```
 
-It shows a modal window with a text message, an input field for the visitor and buttons OK/CANCEL.
+Afișează o fereastră modal cu un mesaj text, un câmp input pentru vizitator și butoanele OK/CANCEL.
 
 `title`
-: The text to show to the visitor.
+: Textul de arătat vizitatorului.
 
 `default`
-: An optional second parameter, the initial value for the input field.
+: Un parametru secundar opțional, valoarea inițială pentru câmpul input.
 
-The visitor may type something in the prompt input field and press OK. Or they can cancel the input by pressing the CANCEL button or hitting the `key:Esc` key.
+Vizitatorul poate tipări ceva în câmpul de input din prompt și să apese OK. Sau acesta poate poate anula inputul apăsând butonul CANCEL sau apăsând tasta `key:Esc`.
 
-The call to `prompt` returns the text from the field or `null` if the input was canceled.
+Apelul lui `prompt` returnează textul din câmp sau `null` dacă input-ul a fost anulat.
 
-For instance:
+Spre exemplu:
 
 ```js run
 let age = prompt('How old are you?', 100);
@@ -51,15 +51,15 @@ alert(`You are ${age} years old!`); // You are 100 years old!
 ```
 
 ````warn header="IE: always supply a `default`"
-The second parameter is optional. But if we don't supply it, Internet Explorer would insert the text `"undefined"` into the prompt.
+Al doilea parametru este opțional. Dar dacă nu îl dăm Internet Explorer va insera textul `"undefined"` în prompt.
 
-Run this code in Internet Explorer to see that:
+Rulează acest cod în Internet Explorer pentru a vedea acest lucru:
 
 ```js run
 let test = prompt("Test");
 ```
 
-So, to look good in IE, it's recommended to always provide the second argument:
+Așadar pentru a arăta bine în IE este recomandat ca întotdeauna să se furnizeze al doilea argument:
 
 ```js run
 let test = prompt("Test", ''); // <-- for IE
@@ -68,17 +68,17 @@ let test = prompt("Test", ''); // <-- for IE
 
 ## confirm
 
-The syntax:
+Sintaxa:
 
 ```js
 result = confirm(question);
 ```
 
-Function `confirm` shows a modal window with a `question` and two buttons: OK and CANCEL.
+Funcția `confirm` afișează o fereastră modal cu o `întrebare` și două butoane: OK și CANCEL.
 
-The result is `true` if OK is pressed and `false` otherwise.
+Rezultatul este `true` dacă OK a fost apăsat și `false` altfel.
 
-For example:
+De exemplu:
 
 ```js run
 let isBoss = confirm("Are you the boss?");
@@ -86,24 +86,24 @@ let isBoss = confirm("Are you the boss?");
 alert( isBoss ); // true if OK is pressed
 ```
 
-## Summary
+## Rezumat
 
-We covered 3 browser-specific functions to interact with the visitor:
+Am acoperit 3 funcții de interacțiune cu vizitatorul, specifice browser-ului:
 
 `alert`
-: shows a message.
+: afișează un mesaj.
 
 `prompt`
-: shows a message asking the user to input text. It returns the text or, if CANCEL or `key:Esc` is clicked, all browsers return `null`.
+: afișează un mesaj, cerând utilizatorului să introducă text. Returnează textul sau dacă butoanele CANCEL sau `key:Esc` sunt apăsate toate browserele vor returna `null`.
 
 `confirm`
-: shows a message and waits for the user to press "OK" or "CANCEL". It returns `true` for OK and `false` for CANCEL/`key:Esc`.
+: afișează un mesaj și așteaptă ca utilizatorul să apese "OK" or "CANCEL". Va returna `true` pentru OK și `false` for CANCEL/`key:Esc`.
 
-All these methods are modal: they pause the script execution and don't allow the visitor to interact with the rest of the page until the message has been dismissed.
+Toate aceste metode sunt de tip modal: ele vor pauza execuția scriptului și nu vor permite vizitatorului să interacționeze cu restul paginii până ce mesajul a fost respins.
 
-There are two limitations shared by all the methods above:
+Există două limitări împărțite de toate metodele de mai sus:
 
-1. The exact location of the modal window is determined by the browser. Usually it's in the center.
-2. The exact look of the window also depends on the browser. We can't modify it.
+1. Locația exactă a ferestrei modal este determinată de browser. De obicei este în centru.
+2. Aspectul exact al ferestrei depinde de asemenea de browser. Nu îl putem modifica.
 
-That is the price for simplicity. There are other ways to show nicer windows and richer interaction with the visitor, but if "bells and whistles" do not matter much, these methods work just fine.
+Acesta este prețul pentru simplitate. Există alte modalități de a arăta ferestre mai frumoase și interacțiune mai bogată cu vizitatorul, dar dacă "clopotele și fluierele" nu contează prea mult, aceste metode vor fi suficiente.
