@@ -2,7 +2,7 @@
 
 Această parte a tutorialului țintește să acopere JavaScript-ul "așa cum este", fără trucurile specifice mediului.
 
-Dar totuși folosim browser-ul ca și mediu de demo. Așadar ar trebui să știm câteva funcții de interfață. În acest capitol ne vom familiariza cu funcțiile browser-ului `alert`, `prompt` and `confirm`.
+Dar totuși folosim browser-ul ca și mediu pentru demo. Așadar ar trebui să știm câteva funcții de interfață. În acest capitol ne vom familiariza cu funcțiile browser-ului `alert`, `prompt` și `confirm`.
 
 ## alert
 
@@ -38,7 +38,7 @@ Afișează o fereastră modal cu un mesaj text, un câmp input pentru vizitator 
 `default`
 : Un parametru secundar opțional, valoarea inițială pentru câmpul input.
 
-Vizitatorul poate tipări ceva în câmpul de input din prompt și să apese OK. Sau acesta poate poate anula inputul apăsând butonul CANCEL sau apăsând tasta `key:Esc`.
+Vizitatorul poate tipări ceva în câmpul de input din prompt și să apese OK. Sau acesta poate anula inputul apăsând butonul CANCEL sau apăsând tasta `key:Esc`.
 
 Apelul lui `prompt` returnează textul din câmp sau `null` dacă input-ul a fost anulat.
 
@@ -76,7 +76,7 @@ result = confirm(question);
 
 Funcția `confirm` afișează o fereastră modal cu o `întrebare` și două butoane: OK și CANCEL.
 
-Rezultatul este `true` dacă OK a fost apăsat și `false` altfel.
+Rezultatul este `true` dacă a fost apăsat OK și `false` altfel.
 
 De exemplu:
 
@@ -97,13 +97,13 @@ Am acoperit 3 funcții de interacțiune cu vizitatorul, specifice browser-ului:
 : afișează un mesaj, cerând utilizatorului să introducă text. Returnează textul sau dacă butoanele CANCEL sau `key:Esc` sunt apăsate toate browserele vor returna `null`.
 
 `confirm`
-: afișează un mesaj și așteaptă ca utilizatorul să apese "OK" or "CANCEL". Va returna `true` pentru OK și `false` for CANCEL/`key:Esc`.
+: afișează un mesaj și așteaptă ca utilizatorul să apese "OK" sau "CANCEL". Va returna `true` pentru OK și `false` pentru CANCEL/`key:Esc`.
 
 Toate aceste metode sunt de tip modal: ele vor pauza execuția scriptului și nu vor permite vizitatorului să interacționeze cu restul paginii până ce mesajul a fost respins.
 
-Există două limitări împărțite de toate metodele de mai sus:
+Există două limitări împărtășite de toate metodele de mai sus:
 
 1. Locația exactă a ferestrei modal este determinată de browser. De obicei este în centru.
 2. Aspectul exact al ferestrei depinde de asemenea de browser. Nu îl putem modifica.
 
-Acesta este prețul pentru simplitate. Există alte modalități de a arăta ferestre mai frumoase și interacțiune mai bogată cu vizitatorul, dar dacă "clopotele și fluierele" nu contează prea mult, aceste metode vor fi suficiente.
+Acesta este prețul plătit pentru simplitate. Există alte modalități de a arăta ferestre mai frumoase și interacțiune mai bogată cu vizitatorul, dar dacă "clopotele și fluierele" nu contează prea mult, aceste metode vor fi suficiente.
