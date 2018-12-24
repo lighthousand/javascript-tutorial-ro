@@ -1,6 +1,6 @@
 **Yes, it will.**
 
-Orice string exceptând unul gol (și `"0"` nu este gol) devine `true` în contextul logic.
+Orice string exceptând unul gol (`"0"` nu este gol) devine `true` în contextul logic.
 
 Putem să rulăm și să verificăm:
 

@@ -29,7 +29,7 @@ if (year == 2015) {
 }
 ```
 
-Este recomandat să înconjori blocul de cod cu acolade `{}` de fiecare dată când folosești `if`, chiar dacă este ai doar o singură afirmație. Acest lucru îmbunătățește lizibilitatea.
+Este recomandat să înconjori blocul de cod cu acolade `{}` de fiecare dată când folosești `if`, chiar dacă ai doar o singură afirmație. Acest lucru îmbunătățește lizibilitatea.
 
 ## Conversie booleană
 
@@ -99,7 +99,7 @@ if (year < 2015) {
 }
 ```
 
-În codul de deasupra JavaScript verifică mai întâi `year < 2015`. Dacă este falsy atunci merge către următoarea condiție `year > 2015`, altfel afișează ultimul `alert`.
+În codul de deasupra, JavaScript verifică mai întâi `year < 2015`. Dacă este falsy atunci merge către următoarea condiție `year > 2015`, altfel afișează ultimul `alert`.
 
 Pot fi mai multe blocuri `else if`. Terminația `else` este opțională.
 
@@ -133,7 +133,7 @@ Sintaxa este:
 let result = condition ? value1 : value2
 ```
 
-`Condiția` este evaluată, dacă este truthy atunci este returnat `value1`, aștfel -- `value2`.
+`Condiția` este evaluată, dacă este truthy atunci este returnat `value1`, altfel -- `value2`.
 
 De exemplu:
 
@@ -199,7 +199,7 @@ if (age < 3) {
 
 ## Folosirea lui '?' non-tradițională
 
-Uneori semnul întrebării `?` este folosit ca și înlocuitpr pentru `if`:
+Uneori semnul întrebării `?` este folosit ca și înlocuitor pentru `if`:
 
 ```js run no-beautify
 let company = prompt('Which company created JavaScript?', '');
@@ -218,7 +218,7 @@ Nu asignăm un rezultat unei variabile, aici. Ideea este să executăm cod difer
 
 Notația pare a fi mai scurtă decât `if`, ceea ce atrage pe unii programatori. Dar este mai puțin citibil.
 
-Aici avem același cod cu `if` pentru comparație:
+Aici avem același cod, cu `if`, pentru comparație:
 
 ```js run no-beautify
 let company = prompt('Which company created JavaScript?', '');
@@ -232,6 +232,6 @@ if (company == 'Netscape') {
 */!*
 ```
 
-Ochii noștri pot scana codul, vertical. Construcțiile ce se întind pe mai multe linii sunt mai ușor de înțeles decât un set de instrucțiuni orizontal, lung.
+Ochii noștri pot scana codul, vertical. Construcțiile ce se întind pe mai multe linii sunt mai ușor de înțeles decât un set de instrucțiuni orizontale, lungi.
 
-Ideea semnului întrebării `?` este de a returna una sau altă valoare în funcție de codiție. Te rog folosește-l doar pentru acest lucru. Există `if` pentru a executa diferite ramuri ale codului.
+Ideea semnului întrebării `?` este de a returna o valoare în funcție de condiție. Te rog, folosește-l doar pentru acest lucru. Există `if` pentru a executa diferite ramuri ale codului.
