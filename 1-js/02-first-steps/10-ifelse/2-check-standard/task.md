@@ -1,12 +1,12 @@
-importance: 2
+importanță: 2
 
 ---
 
-# The name of JavaScript
+# Numele JavaScript-ului
 
-Using the `if..else` construct, write the code which asks: 'What is the "official" name of JavaScript?'
+Folosind construcția `if..else`, screi cod ce va întreba: 'Care este numele "oficial" al JavaScript-ului?'
 
-If the visitor enters "ECMAScript", then output "Right!", otherwise -- output: "Didn't know? ECMAScript!"
+Dacă vizitatorul introduce "ECMAScript", atunci afișează "Right!", altfel -- afișează: "Nu știai? ECMAScript!"
 
 ![](ifelse_task2.png)
 

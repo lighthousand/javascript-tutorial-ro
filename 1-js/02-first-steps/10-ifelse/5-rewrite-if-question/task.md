@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Rewrite 'if' into '?'
+# Rescrie 'if' în '?'
 
-Rewrite this `if` using the ternary operator `'?'`:
+Rescrie acest `if` folosind operatorul ternar `'?'`:
 
 ```js
 if (a + b < 4) {

@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# if (a string with zero)
+# if (un string cu zero)
 
-Will `alert` be shown?
+Va fi afișat `alert` ?
 
 ```js
 if ("0") {

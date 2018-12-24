@@ -1,8 +1,8 @@
 **Yes, it will.**
 
-Any string except an empty one (and `"0"` is not empty) becomes `true` in the logical context.
+Orice string exceptând unul gol (și `"0"` nu este gol) devine `true` în contextul logic.
 
-We can run and check:
+Putem să rulăm și să verificăm:
 
 ```js run
 if ("0") {

@@ -1,15 +1,15 @@
-importance: 2
+importanță: 2
 
 ---
 
-# Show the sign
+# Afișează semnul
 
-Using `if..else`, write the code which gets a number via `prompt` and then shows in `alert`:
+Folosind `if..else`, scrie cod care primesște un număr via `prompt` și apoi îl afișează în `alert`:
 
-- `1`, if the value is greater than zero,
-- `-1`, if less than zero,
-- `0`, if equals zero.
+- `1`, dacă valoarea este mai mare decât zero,
+- `-1`, dacă este mai mică decât zero,
+- `0`, dacă este egală cu zero.
 
-In this task we assume that the input is always a number.
+În acest task presupunem faptul că input-ul este întotdeauna un număr.
 
 [demo src="if_sign"]

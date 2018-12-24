@@ -1,25 +1,25 @@
-importance: 3
+importanță: 3
 
 ---
 
-# Check the login
+# Verifică login-ul
 
-Write the code which asks for a login with `prompt`.
+Scrie cod care așteaptă un login cu `prompt`.
 
-If the visitor enters `"Admin"`, then `prompt` for a password, if the input is an empty line or `key:Esc` -- show "Canceled.", if it's another string -- then show "I don't know you".
+Dacă vizitatorul introduce `"Admin"`, atunci afișează `prompt` pentru parolă, dacă input-ul este o linie goală sau `key:Esc` -- afișează "Canceled.", dacă este alt string -- atunci afișează "Nu te cunosc".
 
-The password is checked as follows:
+Parola este verificată după cum urmează:
 
-- If it equals "TheMaster", then show "Welcome!",
-- Another string -- show "Wrong password",
-- For an empty string or cancelled input, show "Canceled."
+- Dacă este egală cu "TheMaster", atunci afișează "Welcome!",
+- Alt string -- afișează "Parolă greșită",
+- Pentru un string gol sau input anulat, afișează "Canceled."
 
-The schema:
+Schema:
 
 ![](ifelse_task.png)
 
-Please use nested `if` blocks. Mind the overall readability of the code.
+Te rog folosește blocuri imbricate `if`. Ai grijă la lizibilitatea globală a codului.
 
-Hint: passing an empty input to a prompt returns an empty string `''`. Pressing `key:ESC` during a prompt returns `null`.
+Indiciu: transmiterea unui input gol către un prompt returnează un string gol `''`. Apăsarea tastei `key:ESC` în timpul unui prompt returnează `null`.
 
 [demo]

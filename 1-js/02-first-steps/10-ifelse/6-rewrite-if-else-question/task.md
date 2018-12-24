@@ -1,12 +1,12 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Rewrite 'if..else' into '?'
+# Rescrie 'if..else' în '?'
 
-Rewrite `if..else` using multiple ternary operators `'?'`.
+Rescrie `if..else` folosind operatori ternari `'?'` multiplii.
 
-For readability, it's recommended to split the code into multiple lines.
+Pentru lizibilitate este recomandat să divizezi codul în linii multiple.
 
 ```js
 let message;
