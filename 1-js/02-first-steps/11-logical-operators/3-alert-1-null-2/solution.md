@@ -1,4 +1,4 @@
-The answer: `null`, because it's the first falsy value from the list.
+Răspunsul: `null`, pentru că este prima valoare falsy din listă.
 
 ```js run
 alert( 1 && null && 2 );

@@ -1,6 +1,6 @@
-The answer: the first and the third will execute.
+Răspunsul: primul și al doilea vor executa.
 
-Details:
+Detalii:
 
 ```js run
 // Runs.
@@ -17,4 +17,3 @@ if (-1 && 0) alert( 'second' );
 // null || -1 && 1  ->  null || 1  ->  1
 if (null || -1 && 1) alert( 'third' );
 ```
-

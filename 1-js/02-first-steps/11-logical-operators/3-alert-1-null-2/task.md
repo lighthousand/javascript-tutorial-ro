@@ -1,10 +1,10 @@
-importance: 5
+importanță: 5
 
 ---
 
-# What is the result of AND?
+# Care este rezultatul lui AND?
 
-What is this code going to show?
+Ce va afișa codul?
 
 ```js
 alert( 1 && null && 2 );
