@@ -80,7 +80,7 @@ Operatorul OR `||` face următoarele:
 
 - Evaluează operanzii de la stânga la dreapta.
 - Pentru fiecare operand, face conversie la boolean. Dacă rezultatul este `true`, atunci se oprește și returnează valoarea originală a operandului.
-- Dacă toți ceilalți operanzi au fost evaluați (cu alte cuvinte toți au fost `false`), returnează ultimul operand.
+- Dacă toți ceilalți operanzi au fost evaluați (cu alte cuvinte toții au fost `false`), returnează ultimul operand.
 
 O valoare este returnată în forma sa originală, fără realizarea conversiei.
 
@@ -119,9 +119,9 @@ Acest lucru duce la utilizări interesante în comparație cu un "OR clasic, pur
     Dacă ambii `currentUser` și `defaultUser` erau falsy atunci rezultatul ar fi fost `"unnamed"`.
 2. **Evaluare scurt-circuitată.**
 
-    Operanzii pot fi nu numai valori, ci și expresii arbitrare. OR evaluează și testează de la stânga spre dreapta. Evaluarea se oprește când se ajunge la o valoare truthy, iar aceasta este apoi returnată. Procesul se numește "evaluare scurt-circuitată" pentru merge cât de puțin (scurt) posibil de la stânga la dreapta.
+    Operanzii pot fi nu numai valori, ci și expresii arbitrare. OR evaluează și testează de la stânga spre dreapta. Evaluarea se oprește când se ajunge la o valoare truthy, iar aceasta este apoi returnată. Procesul se numește "evaluare scurt-circuitată" pentru a merge cât de puțin (scurt) posibil de la stânga la dreapta.
 
-    Acest lucru se vede clar când expresia dată pe post de al doilea argument are un efect secundar. Precum o asignare de variabilă.
+    Acest lucru se vede clar când expresia, dată ca și al doilea argument, are un efect secundar. Precum o asignare de variabilă.
 
     Dacă rulăm exemplul de mai jos, lui `x` nu i s-ar mai asigna:
 
@@ -157,7 +157,7 @@ Operatorul AND este reprezentat de 2 simboluri ampersand `&&`:
 result = a && b;
 ```
 
-În programarea clasică AND returnează `true` dacă ambii operanzi sunt truthy și `false` în caz contrar:
+În programarea clasică AND returnează `true` dacă ambii operanzi sunt truthy, și `false` în caz contrar:
 
 ```js run
 alert( true && true );   // true
@@ -195,7 +195,7 @@ result = value1 && value2 && value3;
 Operatorul AND `&&` face următoarele:
 
 - Evaluează operanzii de la stânga la dreapta.
-- Pentru fiecare operand, îl convertește la boolean. Dacă rezultatul este `false`, se oprește și returnează valoare originală a acelui operand.
+- Pentru fiecare operand, îl convertește la boolean. Dacă rezultatul este `false`, se oprește și returnează valoarea originală a acelui operand.
 - Dacă toți ceilalți operanzi au fost evaluați (cu alte cuvinte dacă toți sunt truthy), returnează ultimul operand.
 
 Altfel spus AND returnează prima valoare falsy sau ultima valoare dacă niciuna nu a fost găsită.
@@ -244,7 +244,7 @@ let x = 1;
 (x > 0) && alert( 'Greater than zero!' );
 ```
 
-Acțiunea din partea dreaptă a lui `&&` ar executa doar dacă evaluarea va ajunge acolo. Asta se întâmplă doar dacă `(x > 0)` este adevărat.
+Acțiunea din partea dreaptă a lui `&&` va executa doar dacă evaluarea va ajunge acolo. Asta se întâmplă doar dacă `(x > 0)` este adevărat.
 
 Astfel avem ceva analog pentru:
 
