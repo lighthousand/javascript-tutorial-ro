@@ -4,7 +4,7 @@ Adesea suntem obligați să îndeplinim acțiuni similare de mai multe ori la r�
 
 De exemplu, când avem nevoie să afișăm bunuri dintr-o listă, unul după altul. Sau doar să rulăm același cod pentru fiecare număr de la 1 la 10.
 
-*Buclele* reprezintă o metodă de a repeta aceeași bucată de cod de multiple ori.
+*Buclele* reprezintă o metodă de a repeta aceeași bucată de cod de mai multe ori.
 
 ## Bucla "while"
 
@@ -60,7 +60,7 @@ while (i) alert(i--);
 
 ## Bucla "do..while"
 
-Verificarea condiției poate fi mutat *mai jos*, corpul buclei folosind sintaxa `do..while`:
+Verificarea condiției poate fi mutată *mai jos*, corpul buclei folosind sintaxa `do..while`:
 
 ```js
 do {
@@ -68,7 +68,7 @@ do {
 } while (condition);
 ```
 
-Bucla va executa mai întâi corpul, apoi va verifica condiția și, cât timp este adevărată, va executa din nou și din nou.
+Bucla va executa mai întâi corpul, apoi va verifica condiția, și cât timp este adevărată va executa din nou și din nou.
 
 Spre exemplu:
 
@@ -115,8 +115,8 @@ Algoritmul ciclic general funcționează astfel:
 ```
 Începe execuția
 → (dacă condiție → execută corp și execută pas)
-→ (if condition → execută corp și execută pas)
-→ (if condition → execută corp și execută pas)
+→ (dacă condiție → execută corp și execută pas)
+→ (dacă condiție → execută corp și execută pas)
 → ...
 ```
 
@@ -191,7 +191,7 @@ for (; i < 3;) {
 
 Bucla a devenit identică cu `while (i < 3)`.
 
-Pute defapt să ștergem tot, astfel creând o buclă infinită:
+Putem defapt să ștergem tot, astfel creând o buclă infinită:
 
 ```js
 for (;;) {
@@ -205,7 +205,7 @@ Te rog observă că cele 2 `;` ale `for-ului`trebuie să fie prezente, altfel ar
 
 În mod normal bucla iese când condiția devine falsă.
 
-Dar putem forța ieșirea în orice moment. Există o directivă `break` special pentru acest lucru.
+Dar putem forța ieșirea în orice moment. Există o directivă, `break` special pentru acest lucru.
 
 Spre exemplu, bucla de mai jos cere utilizatorului o secvență de numere, dar "întrerupe" atunci când nu este introdus un număr:
 
@@ -265,7 +265,7 @@ for (let i = 0; i < 10; i++) {
 
 Dintr-un punct de vedere tehnic este identic cu exemplul de mai sus. Cu siguranță putem înconjura codul în blocul `if` în loc de `continue`.
 
-Dar ca și efect secundar am creeat încă un nivel de imbricare (apelul lui `alert` dinăuntrul acoladelor). Dacă codul dinăuntrul lui `if` este mai mare de câteva linii, acest lucru ar putea descrește lizibilitatea în general.
+Dar ca și efect secundar am creeat încă un nivel de îmbricare (apelul lui `alert` dinăuntrul acoladelor). Dacă codul dinăuntrul lui `if` este mai mare de câteva linii, acest lucru ar putea descrește lizibilitatea în general.
 ````
 
 ````warn header="No `break/continue` to the right side of '?'"
@@ -319,14 +319,14 @@ Avem nevoie de o modalitate de a opri procesul dacă utilizatorul anulează inpu
 
 `break-ul` normal, după `input` ar ieși doar din bucla internă. Acesta nu este suficient. Etichetele vin în ajutor.
 
-O *Etichetă* este un identificatpr cu două puncte, înainte de o buclă:
+O *Etichetă* este un identificator cu două puncte, înainte de o buclă:
 ```js
 labelName: for (...) {
   ...
 }
 ```
 
-Afirmația `break <labelName>` din buclă iese unde este eticheta.
+Afirmația `break <labelName>` din buclă, iese unde este eticheta.
 
 Ca și aici:
 
@@ -357,7 +357,7 @@ outer:
 for (let i = 0; i < 3; i++) { ... }
 ```
 
-Directiva `continue` poate fi de asemenea folosită cu o etichetă. În acest caz execuția sare la următoarea iterație buclei etichetate.
+Directiva `continue` poate fi de asemenea folosită cu o etichetă. În acest caz execuția sare la următoarea iterație a buclei etichetate.
 
 ````warn header="Labels are not a \"goto\""
 Etichetele nu ne permit să sărim într-o parte arbitrară a codului.

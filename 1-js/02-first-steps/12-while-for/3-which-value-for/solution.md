@@ -14,4 +14,4 @@ Acest lucru poate fi dedus ușor din algoritmul lui `for`:
 
 Incrementarea `i++` este separată de condiția de verificare (2). Aceasta este doar o altă afirmație.
 
-Valoarea returnată de incrementare nu este folosită aici, așadar nu există nicio diferentă între `i++` și `++i`.
+Valoarea returnată de incrementare nu este folosită aici, așadar nu există nicio diferență între `i++` și `++i`.

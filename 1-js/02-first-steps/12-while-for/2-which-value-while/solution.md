@@ -25,6 +25,6 @@ Task-ul demonstrează cum formele postfixată/prefixată pot duce la rezultate d
 
     Apoi urmează `2, 3, 4…` 
 
-    Să ne oprim la `i = 4`. Forma prefixată `++i` ar incrementa-o și ar folosi `5` în comparație. Dar aici avem forma postfixată `i++`. Așa că incrementează pe `i` to `5`, dar returnează vechea valoare. Așadar comparația este defapt `while(4 < 5)` -- adevărat, și controlul merge la `alert`.
+    Să ne oprim la `i = 4`. Forma prefixată `++i` ar incrementa-o și ar folosi `5` în comparație. Dar aici avem forma postfixată `i++`. Așa că incrementează pe `i` la `5`, dar returnează vechea valoare. Așadar comparația este defapt `while(4 < 5)` -- adevărat, și controlul merge la `alert`.
 
     Valoarea `i = 5` este ultima, pentru că la următorul pas `while(5 < 5)` este fals.
