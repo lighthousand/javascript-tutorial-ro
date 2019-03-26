@@ -1,6 +1,6 @@
-There are many algorithms for this task.
+Există mulți algoritmi pentru această sarcină.
 
-Let's use a nested loop:
+Să folosim o buclă îmbricată:
 
 ```js
 For each i in the interval {
@@ -10,7 +10,7 @@ For each i in the interval {
 }
 ```
 
-The code using a label:
+Codul folosind o etichetă:
 
 ```js run
 let n = 10;
@@ -26,4 +26,4 @@ for (let i = 2; i <= n; i++) { // for each i...
 }
 ```
 
-There's a lot of space to opimize it. For instance, we could look for the divisors from `2` to square root of `i`. But anyway, if we want to be really efficient for large intervals, we need change the approach and rely on advanced maths and complex algorithms like [Quadratic sieve](https://en.wikipedia.org/wiki/Quadratic_sieve), [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve) etc.
+Poate fi optimizat în multe moduri. Spre exemplu, am putea căuta pentru divizori de la `2` până la rădăcina pătrată a lui `i`. Dar totuși, dacă vrem să fie cu adevărat eficient pe intervale mari trebuie să schimbăm abordarea și să ne bazăm pe matematică avansată și pe algoritmi complexi ca [Quadratic sieve](https://en.wikipedia.org/wiki/Quadratic_sieve), [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve) etc.

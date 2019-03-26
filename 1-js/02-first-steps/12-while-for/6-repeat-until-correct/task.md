@@ -1,13 +1,13 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Repeat until the input is correct
+# Repetă până când valorile de intrare sunt corecte
 
-Write a loop which prompts for a number greater than `100`. If the visitor enters another number -- ask them to input again.
+Scrie o buclă care afișează numerele mai mari decât `100`. Dacă vizitatorul introduce un alt number -- cere un nou input.
 
-The loop must ask for a number until either the visitor enters a number greater than `100` or cancels the input/enters an empty line.
+Bucla trebuie să ceară un număr până ce fie vizitatorul introduce un număr mai mare decât `100` sau anulează inputul/introduce o linie nouă.
 
-Here we can assume that the visitor only inputs numbers. There's no need to implement a special handling for a non-numeric input in this task.
+Aici putem presupune că vizitatorul introduce doar numere. Nu este nici o nevoie pentru a implementa o manipulare specială pentru valorile non-numerice în această sarcină.
 
 [demo]

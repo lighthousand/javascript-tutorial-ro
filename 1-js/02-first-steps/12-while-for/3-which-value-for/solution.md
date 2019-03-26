@@ -1,4 +1,4 @@
-**The answer: from `0` to `4` in both cases.**
+**Răspunsul: de la `0` la `4` în ambele cazuri.**
 
 ```js run
 for (let i = 0; i < 5; ++i) alert( i );
@@ -6,12 +6,12 @@ for (let i = 0; i < 5; ++i) alert( i );
 for (let i = 0; i < 5; i++) alert( i );
 ```
 
-That can be easily deducted from the algorithm of `for`:
+Acest lucru poate fi dedus ușor din algoritmul lui `for`:
 
-1. Execute once `i = 0` before everything (begin).
-2. Check the condition `i < 5`
-3. If `true` -- execute the loop body `alert(i)`, and then `i++`
+1. Execută odată `i = 0` înainte de orice altceva (început).
+2. Verifică condiția `i < 5`
+3. Dacă `true` -- execută corpul buclei `alert(i)` și apoi `i++`
 
-The increment `i++` is separated from the condition check (2). That's just another statement.
+Incrementarea `i++` este separată de condiția de verificare (2). Aceasta este doar o altă afirmație.
 
-The value returned by the increment is not used here, so there's no difference between `i++` and `++i`.
+Valoarea returnată de incrementare nu este folosită aici, așadar nu există nicio diferentă între `i++` și `++i`.

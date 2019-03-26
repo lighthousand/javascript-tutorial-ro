@@ -1,14 +1,13 @@
-importance: 5
+importanță: 5
 
 ---
 
-# Replace "for" with "while"
+# Înlocuiește "for" cu "while"
 
-Rewrite the code changing the `for` loop to `while` without altering its behavior (the output should stay same).
+Rescrie codul schimbând bucla `for` cu `while` fără a altera comportamentul său (rezultatul trebuie să rămână la fel).
 
 ```js run
 for (let i = 0; i < 3; i++) {
   alert( `number ${i}!` );
 }
 ```
-

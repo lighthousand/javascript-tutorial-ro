@@ -7,9 +7,9 @@ do {
 } while (num <= 100 && num);
 ```
 
-The loop `do..while` repeats while both checks are truthy:
+Bucla `do..while` se repetă atât timp cât ambele verificări sunt valide:
 
-1. The check for `num <= 100` -- that is, the entered value is still not greater than `100`.
-2. The check `&& num` is false when `num` is `null` or a empty string. Then the `while` loop stops too.
+1. Verificarea `num <= 100` -- înseamnă atât timp cât valoarea introdusă nu este mai mare de `100`.
+2. Verificarea `&& num` este falsă când `num` este `null` sau un string gol. Apoi bucla `while` se oprește de asemenea.
 
-P.S. If `num` is `null` then `num <= 100` is `true`, so without the 2nd check the loop wouldn't stop if the user clicks CANCEL. Both checks are required.
+P.S. Dacă `num` este `null` atunci `num <= 100` este `true`, așadar fără cea de a doua verificare bucla nu se va opri dacă utilizatorul apasă CANCEL. Ambele validări sunt necesare.
