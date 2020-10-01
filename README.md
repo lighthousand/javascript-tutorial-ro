@@ -2,7 +2,7 @@
 
 Acest repository găzduiește conținutul articolului Modern JavaScript Tutorial, publicat la [https://javascript.info](https://javascript.info).
 
-## Traduceri
+## Traduceri:
 
 (În ordine alfabetică):
 
@@ -21,7 +21,7 @@ Dacă dorești să traduci în limba ta, te rog clonează repository-ul, schimb�
 Poți edita textul în orice editor (cu stil de sintaxă markdown). Server-ul folosit pentru a rula tutorialul local, și modul de utilizare se află la : <https://github.com/iliakan/javascript-tutorial-server>.  
 
 
-## Structură
+## Structură:
 
 Fiecare capitol, articol sau task își are folder-ul propriu.
 
